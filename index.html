@@ -1,0 +1,1315 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a52">
+  <meta name="description" content="Dentpoll Dental, Elazığ'da kişiye özel ağız ve diş sağlığı hizmeti sunuyor. Hekimlerimizi tanıyın ve randevu için bize ulaşın.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dentpoll Dental | Elazığ">
+  <meta property="og:description" content="Elazığ'ın gülüşü burada parlasın. Dentpoll Dental hekimleri ve kliniğiyle tanışın.">
+  <meta property="og:image" content="assets/hero-dental.jpg">
+  <title>Dentpoll Dental | Elazığ'da Diş Hekimliği</title>
+  <link rel="icon" type="image/png" href="assets/dentpoll-mark.png">
+  <style>
+    :root {
+      --navy: #102a52;
+      --navy-2: #1d3f70;
+      --navy-3: #315f95;
+      --teal: #c6e2fa;
+      --teal-dark: #3169a9;
+      --teal-pale: #eaf4fc;
+      --blue-pale: #f1f6fb;
+      --cream: #f8fbfe;
+      --white: #fff;
+      --sand: #edf3f9;
+      --gold: #4b82bd;
+      --ink: #1c304c;
+      --body: #50617a;
+      --muted: #75839a;
+      --line: #dbe5ef;
+      --shadow: 0 18px 48px rgba(16,42,82,.11);
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --container: 1200px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: var(--sans); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    body, button, input, select, textarea { font-family: var(--sans); }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    ::selection { color: #fff; background: var(--teal-dark); }
+    .svg-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+    .icon { display: inline-block; width: 20px; height: 20px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .container { width: min(var(--container), calc(100% - 64px)); margin-inline: auto; }
+    .skip-link { position: fixed; z-index: 200; top: 10px; left: 10px; transform: translateY(-160%); padding: 10px 16px; border-radius: 9px; color: #fff; background: var(--navy); }
+    .skip-link:focus { transform: translateY(0); }
+    .scroll-progress { position: fixed; z-index: 120; top: 0; left: 0; width: 100%; height: 3px; transform: scaleX(0); transform-origin: left center; pointer-events: none; background: linear-gradient(90deg,var(--teal),#8bd0c8,var(--gold)); }
+    :focus-visible { outline: 3px solid rgba(215,171,94,.9); outline-offset: 3px; }
+
+    /* Utility bar and navigation */
+    .topbar { color: rgba(255,255,255,.83); background: var(--navy); font-size: 11px; letter-spacing: .025em; }
+    .topbar-inner { min-height: 36px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .topbar-place, .topbar-phone { display: inline-flex; align-items: center; gap: 8px; }
+    .topbar .icon { width: 14px; height: 14px; color: #8dd2ca; }
+    .topbar-phone { font-weight: 700; transition: color .2s ease; }
+    .topbar-phone:hover { color: #a8e4db; }
+    .site-header { position: sticky; z-index: 50; top: 0; border-bottom: 1px solid rgba(227,232,239,.9); background: rgba(251,250,247,.94); backdrop-filter: blur(16px); }
+    .nav-shell { min-height: 82px; display: flex; align-items: center; gap: 30px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; min-width: 210px; }
+    .brand-mark { width: 45px; height: 45px; display: grid; flex: 0 0 45px; place-items: center; overflow: hidden; border: 1px solid #e4e8f2; border-radius: 14px; background: #fff; box-shadow: 0 6px 16px rgba(18,31,90,.07); }
+    .brand-mark img { width: 100%; height: 100%; padding: 3px; object-fit: contain; }
+    .brand-word { display: flex; flex-direction: column; line-height: 1; }
+    .brand-word strong { color: var(--navy); font-size: 17px; font-weight: 820; letter-spacing: .065em; }
+    .brand-word small { margin-top: 6px; color: #7b8799; font-size: 8px; font-weight: 750; letter-spacing: .19em; }
+    .main-nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(16px,2.2vw,30px); margin-left: auto; }
+    .main-nav > a:not(.nav-cta) { color: #5b6680; font-size: 12px; font-weight: 650; transition: color .2s ease; }
+    .main-nav > a:not(.nav-cta) { position: relative; }
+    .main-nav > a:not(.nav-cta)::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 1px; transform: scaleX(0); transform-origin: left; background: currentColor; content: ''; transition: transform .28s cubic-bezier(.2,.7,.2,1); }
+    .main-nav > a:not(.nav-cta):hover, .main-nav > a.active { color: var(--teal-dark); }
+    .main-nav > a:not(.nav-cta):hover::after, .main-nav > a.active::after { transform: scaleX(1); }
+    .nav-cta { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 17px; border-radius: 999px; color: #fff; background: var(--navy); box-shadow: 0 9px 20px rgba(18,31,90,.14); font-size: 12px; font-weight: 720; transition: background .2s ease, transform .2s ease, box-shadow .2s ease; }
+    .nav-cta:hover { transform: translateY(-2px); background: var(--navy-2); box-shadow: 0 12px 25px rgba(18,31,90,.2); }
+    .nav-cta .icon { width: 16px; height: 16px; }
+    .menu-toggle { display: none; width: 43px; height: 43px; place-items: center; border: 1px solid var(--line); border-radius: 13px; color: var(--navy); background: #fff; cursor: pointer; }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; padding: 57px 0 56px; background: linear-gradient(180deg,#fbfaf7 0%,#f5f7fa 100%); }
+    .hero::before { position: absolute; top: -300px; right: -200px; width: 650px; height: 650px; border: 1px solid rgba(56,167,162,.14); border-radius: 50%; content: ''; box-shadow: 0 0 0 28px rgba(56,167,162,.035),0 0 0 68px rgba(56,167,162,.025); pointer-events: none; }
+    .hero-grid { position: relative; display: grid; grid-template-columns: .91fr 1.09fr; align-items: center; gap: clamp(40px,6.4vw,85px); }
+    .hero-copy { padding: 20px 0 30px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--teal-dark); font-size: 9px; font-weight: 820; letter-spacing: .19em; text-transform: uppercase; }
+    .eyebrow-dot { width: 7px; height: 7px; display: inline-block; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 5px rgba(215,171,94,.14); }
+    .hero h1 { max-width: 620px; margin: 22px 0 21px; color: var(--navy); font: 500 clamp(49px,6.1vw,79px)/.99 var(--serif); letter-spacing: -.06em; }
+    .hero-title-line { display: block; overflow: hidden; padding-bottom: .06em; margin-bottom: -.06em; }
+    .hero-title-line > span { display: inline-block; }
+    .js-ready .hero-title-line > span { opacity: 0; transform: translateY(112%); animation: titleRise .92s cubic-bezier(.16,1,.3,1) forwards; }
+    .js-ready .hero-title-line:nth-child(1) > span { animation-delay: .12s; }
+    .js-ready .hero-title-line:nth-child(2) > span { animation-delay: .24s; }
+    @keyframes titleRise { to { opacity: 1; transform: translateY(0); } }
+    .hero h1 em { color: var(--teal-dark); font-weight: 500; }
+    .hero-lead { max-width: 480px; margin: 0; color: var(--body); font-size: 15px; line-height: 1.85; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 11px; margin-top: 28px; }
+    .button { min-height: 51px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 0 19px; border: 1px solid transparent; border-radius: 999px; font-size: 12px; font-weight: 730; cursor: pointer; transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: #fff; background: var(--navy); box-shadow: 0 11px 24px rgba(18,31,90,.16); }
+    .button-primary:hover { background: var(--navy-2); box-shadow: 0 15px 27px rgba(18,31,90,.22); }
+    .button-primary .icon { width: 17px; height: 17px; }
+    .button-outline { border-color: #dce3ed; color: var(--navy); background: rgba(255,255,255,.58); }
+    .button-outline:hover { border-color: #afc9ca; background: #fff; }
+    .button-outline .icon { width: 16px; height: 16px; }
+    .hero-proof { display: flex; align-items: center; gap: 11px; margin-top: 29px; }
+    .hero-proof-icon { width: 39px; height: 39px; display: grid; flex: 0 0 39px; place-items: center; border: 1px solid #d8e7e7; border-radius: 50%; color: var(--teal-dark); background: #f7fbfa; }
+    .hero-proof-icon .icon { width: 18px; height: 18px; }
+    .hero-proof-text { display: flex; flex-direction: column; line-height: 1.42; }
+    .hero-proof-text strong { color: var(--navy); font-size: 11px; font-weight: 760; }
+    .hero-proof-text span { color: var(--muted); font-size: 10px; }
+    .hero-visual { position: relative; min-height: 550px; padding: 0 15px 24px 18px; }
+    .hero-photo-back { position: absolute; top: 0; right: 0; bottom: 25px; left: 42px; border: 1px solid rgba(56,167,162,.17); border-radius: 220px 20px 20px 20px; transform: rotate(2.2deg); }
+    .hero-photo-frame { --hero-curve: 220px; --frame-scale: 1; position: relative; z-index: 1; height: 526px; overflow: hidden; border: 7px solid rgba(255,255,255,.82); border-radius: var(--hero-curve) 20px 20px 20px; background: #d8dee0; box-shadow: var(--shadow); transform: perspective(1400px) rotateX(var(--tilt-y,0deg)) rotateY(var(--tilt-x,0deg)) scale(var(--frame-scale)); transform-style: preserve-3d; transition: transform 1.1s cubic-bezier(.16,1,.3,1), clip-path 1.15s cubic-bezier(.16,1,.3,1); }
+    .js-ready .hero-visual:not(.is-visible) .hero-photo-frame { --frame-scale: .965; clip-path: inset(0 5% 0 5% round var(--hero-curve) 20px 20px 20px); }
+    .js-ready .hero-visual.is-visible .hero-photo-frame { --frame-scale: 1; clip-path: inset(0 round var(--hero-curve) 20px 20px 20px); }
+    .hero-visual.is-tilting .hero-photo-frame { transition: transform .24s ease-out, clip-path 1.15s cubic-bezier(.16,1,.3,1); }
+    .hero-photo-frame::after { position: absolute; inset: 50% 0 0; background: linear-gradient(180deg,transparent,rgba(18,31,90,.32)); content: ''; pointer-events: none; }
+    .hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: 51% center; }
+    .parallax-photo { transform: scale(1.075) translate3d(0,var(--parallax-y,0px),0); will-change: transform; }
+    .hero-stamp { position: absolute; z-index: 3; top: 24px; right: -4px; width: 91px; height: 91px; display: grid; align-content: center; justify-items: center; border: 6px solid rgba(255,255,255,.82); border-radius: 50%; color: var(--navy); background: var(--gold); text-align: center; transform: rotate(8deg); box-shadow: 0 9px 25px rgba(18,31,90,.14); }
+    .hero-stamp strong { font: 500 27px/.9 var(--serif); letter-spacing: -.06em; }
+    .hero-stamp span { margin-top: 6px; font-size: 7px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    .hero-photo-caption { position: absolute; z-index: 2; right: 24px; bottom: 42px; left: 42px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #fff; }
+    .photo-caption-brand { display: flex; align-items: center; gap: 10px; }
+    .photo-caption-mark { width: 30px; height: 30px; display: grid; flex: 0 0 30px; place-items: center; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: #fff; background: rgba(255,255,255,.12); }
+    .photo-caption-mark .icon { width: 15px; height: 15px; }
+    .photo-caption-text { display: flex; flex-direction: column; line-height: 1.3; }
+    .photo-caption-text strong { font-size: 10px; font-weight: 760; }
+    .photo-caption-text small { color: rgba(255,255,255,.75); font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
+    .photo-caption-label { padding: 7px 10px; border: 1px solid rgba(255,255,255,.38); border-radius: 999px; color: rgba(255,255,255,.88); background: rgba(18,31,90,.22); font-size: 8px; font-weight: 680; letter-spacing: .08em; backdrop-filter: blur(6px); }
+    .hero-float { position: absolute; z-index: 4; bottom: 0; left: 0; display: flex; align-items: center; gap: 12px; max-width: 259px; padding: 14px 17px; border: 1px solid rgba(255,255,255,.85); border-radius: 16px; background: rgba(255,255,255,.97); box-shadow: 0 13px 32px rgba(18,31,90,.13); }
+    .hero-float-avatar { width: 43px; height: 43px; display: block; flex: 0 0 43px; overflow: hidden; border: 2px solid #fff; border-radius: 50%; box-shadow: 0 0 0 1px #dfe7ef; }
+    .hero-float-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 26%; }
+    .hero-float-copy { display: flex; flex-direction: column; line-height: 1.42; }
+    .hero-float-copy strong { color: var(--navy); font-size: 11px; }
+    .hero-float-copy span { color: var(--muted); font-size: 9px; }
+
+    /* Credibility strip */
+    .proof-band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; }
+    .proof-grid { display: grid; grid-template-columns: repeat(3,1fr); padding: 17px 0; }
+    .proof-item { min-height: 58px; display: flex; align-items: center; justify-content: center; gap: 13px; padding: 5px 20px; }
+    .proof-item + .proof-item { border-left: 1px solid var(--line); }
+    .proof-number { color: var(--teal-dark); font: 500 28px/.95 var(--serif); letter-spacing: -.06em; }
+    .proof-copy { display: flex; flex-direction: column; line-height: 1.35; }
+    .proof-copy strong { color: var(--navy); font-size: 11px; font-weight: 780; }
+    .proof-copy span { color: var(--muted); font-size: 9px; }
+
+    /* Section framework */
+    .section { padding: 98px 0; }
+    .section-soft { background: var(--blue-pale); }
+    .section-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 39px; }
+    .section-heading { max-width: 690px; }
+    .section-heading .eyebrow { margin-bottom: 13px; }
+    .section-heading h2 { margin: 0; color: var(--navy); font: 500 clamp(35px,4.2vw,53px)/1.06 var(--serif); letter-spacing: -.05em; }
+    .section-heading h2 em { color: var(--teal-dark); font-weight: 500; }
+    .section-heading p { max-width: 590px; margin: 15px 0 0; color: var(--body); font-size: 13px; line-height: 1.85; }
+    .section-aside { max-width: 310px; margin: 0 0 4px; color: var(--muted); font-size: 11px; line-height: 1.75; }
+
+    /* Treatments */
+    .services-section { position: relative; overflow: hidden; }
+    .services-section::before { position: absolute; top: 120px; right: -245px; width: 490px; height: 490px; border: 1px solid rgba(56,167,162,.09); border-radius: 50%; content: ''; pointer-events: none; }
+    .services-grid { position: relative; display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+    .service-card { position: relative; min-height: 240px; display: flex; flex-direction: column; padding: 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #fff; transition: transform .23s ease, box-shadow .23s ease, border-color .23s ease; }
+    .service-card:hover { transform: translateY(-4px); border-color: #c6dcda; box-shadow: 0 16px 35px rgba(18,31,90,.08); }
+    .service-card.featured { border-color: transparent; color: #fff; background: linear-gradient(145deg,var(--navy) 0%,#25377f 100%); box-shadow: 0 16px 36px rgba(18,31,90,.16); }
+    .service-card.featured::after { position: absolute; top: -54px; right: -42px; width: 165px; height: 165px; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; content: ''; box-shadow: 0 0 0 18px rgba(255,255,255,.035),0 0 0 39px rgba(255,255,255,.025); }
+    .service-card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 19px; }
+    .service-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px 14px 14px 5px; color: var(--teal-dark); background: var(--teal-pale); }
+    .service-icon .icon { width: 22px; height: 22px; }
+    .featured .service-icon { color: #fff; background: rgba(255,255,255,.13); }
+    .service-index { color: #9ba5b5; font: 500 13px var(--serif); }
+    .featured .service-index { color: rgba(255,255,255,.62); }
+    .service-card h3 { position: relative; z-index: 1; margin: 0 0 7px; color: var(--navy); font: 600 18px/1.2 var(--serif); letter-spacing: -.025em; }
+    .service-card.featured h3 { color: #fff; }
+    .service-card p { position: relative; z-index: 1; max-width: 315px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+    .service-card.featured p { color: rgba(255,255,255,.72); }
+    .service-link { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 7px; margin-top: auto; padding-top: 15px; color: var(--teal-dark); font-size: 10px; font-weight: 780; }
+    .service-link .icon { width: 14px; height: 14px; transition: transform .2s ease; }
+    .service-link:hover .icon { transform: translateX(3px); }
+    .featured .service-link { color: #b8e7df; }
+    .clinical-note { display: flex; align-items: flex-start; gap: 9px; margin: 20px 0 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+    .clinical-note .icon { width: 15px; height: 15px; margin-top: 1px; color: var(--teal-dark); }
+
+    /* Care pathway */
+    .approach-section { padding: 0 0 98px; background: var(--blue-pale); }
+    .approach-panel { position: relative; overflow: hidden; padding: 55px 58px 49px; border-radius: 26px; color: #fff; background: var(--navy); }
+    .approach-panel::before { position: absolute; top: -245px; right: -120px; width: 510px; height: 510px; border: 1px solid rgba(226,242,238,.16); border-radius: 50%; content: ''; box-shadow: 0 0 0 27px rgba(226,242,238,.035),0 0 0 60px rgba(226,242,238,.025); pointer-events: none; }
+    .approach-head { position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 35px; }
+    .approach-panel .eyebrow { color: #a6ddd4; }
+    .approach-panel h2 { max-width: 550px; margin: 14px 0 0; color: #fff; font: 500 clamp(34px,4vw,48px)/1.08 var(--serif); letter-spacing: -.045em; }
+    .approach-panel h2 em { color: #a6ddd4; font-weight: 500; }
+    .approach-intro { max-width: 330px; margin: 0 0 5px; color: rgba(255,255,255,.7); font-size: 11px; line-height: 1.8; }
+    .steps-grid { position: relative; display: grid; grid-template-columns: repeat(3,1fr); gap: 25px; margin-top: 42px; }
+    .step { padding-top: 19px; border-top: 1px solid rgba(255,255,255,.25); }
+    .step-number { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 13px; color: #a6ddd4; font-size: 9px; font-weight: 820; letter-spacing: .16em; }
+    .step-number::before { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); content: ''; }
+    .step h3 { margin: 0 0 6px; color: #fff; font-size: 14px; font-weight: 720; }
+    .step p { max-width: 280px; margin: 0; color: rgba(255,255,255,.68); font-size: 10px; line-height: 1.75; }
+
+    /* Team */
+    .team-section { background: var(--cream); }
+    .team-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 36px; }
+    .team-header .section-heading { max-width: 680px; }
+    .team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 13px; }
+    .doctor-card { min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 18px; background: #fff; transition: transform .25s ease, box-shadow .25s ease; }
+    .doctor-card:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(18,31,90,.10); }
+    .doctor-photo-frame { position: relative; aspect-ratio: 1.06 / 1; overflow: hidden; border-radius: 13px; background: #e8edf1; }
+    .doctor-photo { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+    .doctor-card:hover .doctor-photo { transform: scale(1.04); }
+    .doctor-tag { position: absolute; left: 10px; bottom: 10px; max-width: calc(100% - 20px); padding: 7px 10px; border: 1px solid rgba(255,255,255,.72); border-radius: 999px; color: var(--navy); background: rgba(255,255,255,.94); backdrop-filter: blur(8px); font-size: 7px; font-weight: 850; letter-spacing: .12em; text-align: center; text-transform: uppercase; }
+    .doctor-info { padding: 14px 9px 11px; }
+    .doctor-card h3 { margin: 0 0 6px; color: var(--navy); font: 600 17px/1.25 var(--serif); letter-spacing: -.025em; }
+    .doctor-title { min-height: 33px; margin: 0 0 9px; color: var(--teal-dark); font-size: 9px; font-weight: 800; line-height: 1.55; }
+    .doctor-bio { min-height: 63px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.75; }
+    .doctor-more { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; color: var(--navy); font-size: 9px; font-weight: 800; }
+    .doctor-more .icon { width: 13px; height: 13px; transition: transform .2s ease; }
+    .doctor-more:hover .icon { transform: translateX(3px); }
+
+    /* Clinic */
+    .clinic-section { padding-top: 0; background: var(--cream); }
+    .clinic-card { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(35px,6.5vw,82px); padding: 28px; border: 1px solid var(--line); border-radius: 25px; background: #fff; }
+    .clinic-visual { position: relative; min-height: 405px; overflow: hidden; border-radius: 17px 17px 17px 5px; background: #e7edef; }
+    .clinic-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 1.2s cubic-bezier(.16,1,.3,1); }
+    .js-ready .clinic-card.is-visible .clinic-visual img { transform: scale(1.045) translate3d(0,var(--parallax-y,0px),0); }
+    .clinic-visual::after { position: absolute; inset: 50% 0 0; background: linear-gradient(180deg,transparent,rgba(18,31,90,.27)); content: ''; }
+    .clinic-chip { position: absolute; z-index: 1; left: 15px; bottom: 15px; display: inline-flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid rgba(255,255,255,.6); border-radius: 999px; color: var(--navy); background: rgba(255,255,255,.94); box-shadow: 0 8px 20px rgba(0,0,0,.08); font-size: 9px; font-weight: 760; }
+    .clinic-chip .icon { width: 15px; height: 15px; color: var(--teal-dark); }
+    .clinic-copy { padding: 22px 21px 22px 0; }
+    .clinic-copy .eyebrow { margin-bottom: 13px; }
+    .clinic-copy h2 { max-width: 490px; margin: 0; color: var(--navy); font: 500 clamp(35px,4vw,49px)/1.06 var(--serif); letter-spacing: -.05em; }
+    .clinic-copy h2 em { color: var(--teal-dark); font-weight: 500; }
+    .clinic-copy > p { margin: 16px 0 0; color: var(--body); font-size: 12px; line-height: 1.85; }
+    .clinic-points { display: grid; grid-template-columns: 1fr 1fr; gap: 11px 15px; margin: 22px 0 25px; padding: 0; list-style: none; }
+    .clinic-points li { display: flex; align-items: center; gap: 8px; color: #57657b; font-size: 10px; font-weight: 650; }
+    .clinic-points .icon { width: 15px; height: 15px; color: var(--teal-dark); }
+
+    /* Patient experiences */
+    .reviews-section { background: var(--sand); }
+    .reviews-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
+    .reviews-head .section-heading { max-width: 650px; }
+    .review-context { max-width: 260px; margin: 0 0 4px; color: var(--muted); font-size: 9px; line-height: 1.65; text-align: right; }
+    .reviews-grid { display: grid; grid-template-columns: 1.18fr 1fr 1fr; gap: 13px; }
+    .review-card { min-height: 241px; display: flex; flex-direction: column; padding: 24px 22px 20px; border: 1px solid rgba(224,227,218,.85); border-radius: 17px; background: rgba(255,255,255,.86); }
+    .review-card.featured { color: #fff; border-color: transparent; background: var(--navy); box-shadow: 0 14px 30px rgba(18,31,90,.13); }
+    .quote-mark { color: var(--gold); font: 500 53px/.75 var(--serif); }
+    .review-card blockquote { flex: 1; margin: 15px 0 21px; color: #526079; font: 500 14px/1.62 var(--serif); letter-spacing: -.01em; }
+    .review-card.featured blockquote { color: rgba(255,255,255,.92); font-size: 16px; }
+    .review-person { display: flex; align-items: center; gap: 10px; padding-top: 13px; border-top: 1px solid rgba(103,127,118,.22); }
+    .review-card.featured .review-person { border-color: rgba(255,255,255,.18); }
+    .review-avatar { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; color: var(--navy); background: var(--teal-pale); font: 600 10px var(--serif); }
+    .review-person span { color: #788397; font-size: 9px; font-weight: 670; }
+    .review-card.featured .review-person span { color: rgba(255,255,255,.72); }
+
+    /* FAQ */
+    .faq-section { background: var(--cream); }
+    .faq-grid { display: grid; grid-template-columns: .78fr 1.22fr; align-items: start; gap: clamp(40px,8vw,105px); }
+    .faq-intro { position: sticky; top: 120px; }
+    .faq-intro .section-heading { margin: 0; }
+    .faq-intro .button { margin-top: 21px; }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 19px 0; color: var(--navy); font-size: 12px; font-weight: 760; list-style: none; cursor: pointer; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-plus { position: relative; width: 27px; height: 27px; display: grid; flex: 0 0 27px; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--teal-dark); transition: transform .2s ease, background .2s ease, color .2s ease; }
+    .faq-plus::before, .faq-plus::after { position: absolute; width: 9px; height: 1.5px; border-radius: 2px; background: currentColor; content: ''; transition: transform .2s ease; }
+    .faq-plus::after { transform: rotate(90deg); }
+    .faq-item[open] .faq-plus { transform: rotate(180deg); color: #fff; background: var(--teal-dark); }
+    .faq-item[open] .faq-plus::after { transform: rotate(0); }
+    .faq-item p { max-width: 650px; margin: -1px 44px 19px 0; color: var(--muted); font-size: 10px; line-height: 1.8; }
+
+    /* Contact */
+    .contact-section { position: relative; overflow: hidden; padding: 88px 0; color: #fff; background: var(--navy); }
+    .contact-section::before { position: absolute; top: -300px; left: -200px; width: 620px; height: 620px; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; content: ''; box-shadow: 0 0 0 28px rgba(255,255,255,.025),0 0 0 65px rgba(255,255,255,.02); }
+    .contact-grid { position: relative; display: grid; grid-template-columns: .88fr 1.12fr; align-items: center; gap: clamp(40px,7.5vw,94px); }
+    .contact-copy .eyebrow { color: #a8ded6; }
+    .contact-copy h2 { max-width: 490px; margin: 14px 0 14px; color: #fff; font: 500 clamp(38px,4.8vw,57px)/1.03 var(--serif); letter-spacing: -.052em; }
+    .contact-copy h2 em { color: #a9ded5; font-weight: 500; }
+    .contact-copy > p { max-width: 430px; margin: 0; color: rgba(255,255,255,.69); font-size: 11px; line-height: 1.85; }
+    .contact-list { display: grid; gap: 13px; margin-top: 27px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 11px; }
+    .contact-icon { width: 36px; height: 36px; display: grid; flex: 0 0 36px; place-items: center; border: 1px solid rgba(255,255,255,.15); border-radius: 12px; color: #a8ded6; background: rgba(255,255,255,.06); }
+    .contact-icon .icon { width: 17px; height: 17px; }
+    .contact-item small { display: block; margin: 1px 0 2px; color: rgba(255,255,255,.52); font-size: 8px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .contact-item a, .contact-item address { color: rgba(255,255,255,.91); font-size: 10px; font-style: normal; line-height: 1.65; }
+    .contact-item a:hover { color: #afe5dc; }
+    .contact-form-card { padding: 29px; border: 1px solid rgba(255,255,255,.65); border-radius: 20px; color: var(--ink); background: #fff; box-shadow: 0 25px 65px rgba(7,18,62,.25); }
+    .form-title { margin: 0 0 5px; color: var(--navy); font: 500 27px/1.15 var(--serif); letter-spacing: -.03em; }
+    .form-subtitle { margin: 0 0 21px; color: var(--muted); font-size: 10px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 11px; }
+    .form-field { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+    .form-field.full { grid-column: 1/-1; }
+    .form-field label { color: #56637a; font-size: 9px; font-weight: 760; }
+    .form-field input, .form-field select, .form-field textarea { width: 100%; min-height: 43px; padding: 10px 11px; border: 1px solid #e1e7ee; border-radius: 9px; outline: none; color: var(--ink); background: #fbfcfd; font-size: 11px; transition: border-color .2s ease, box-shadow .2s ease; }
+    .form-field textarea { min-height: 76px; resize: vertical; }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: #a0a9b6; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: #77b9b3; box-shadow: 0 0 0 3px rgba(56,167,162,.12); }
+    .form-submit { width: 100%; margin-top: 15px; }
+    .form-submit .icon { width: 17px; height: 17px; }
+    .form-privacy { margin: 10px 0 0; color: #8791a0; font-size: 8px; line-height: 1.6; text-align: center; }
+    .form-status { min-height: 16px; margin: 7px 0 0; color: var(--teal-dark); font-size: 9px; text-align: center; }
+    .form-disclaimer { margin-top: 17px; padding-top: 13px; border-top: 1px solid #e8edf2; color: #8993a1; font-size: 8px; line-height: 1.65; }
+
+    /* Footer and persistent contact */
+    .footer { padding: 26px 0 22px; color: rgba(255,255,255,.72); background: #0d1748; }
+    .footer-main { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding-bottom: 20px; }
+    .footer .brand { color: #fff; }
+    .footer .brand-mark { border-color: rgba(255,255,255,.78); background: #fff; }
+    .footer .brand-word strong { color: #fff; }
+    .footer .brand-word small { color: rgba(255,255,255,.53); }
+    .footer-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
+    .footer-nav a { color: rgba(255,255,255,.65); font-size: 9px; transition: color .2s ease; }
+    .footer-nav a:hover { color: #b9e8df; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.13); font-size: 8px; }
+    .footer-bottom p { margin: 0; }
+    .footer-note { max-width: 560px; color: rgba(255,255,255,.53); text-align: right; }
+    .floating-whatsapp { position: fixed; z-index: 45; right: 20px; bottom: 20px; display: inline-flex; align-items: center; gap: 9px; padding: 12px 16px 12px 13px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; color: #fff; background: #18855f; box-shadow: 0 12px 27px rgba(13,68,50,.25); font-size: 10px; font-weight: 780; transition: transform .2s ease, background .2s ease; }
+    .floating-whatsapp:hover { transform: translateY(-3px); background: #14744f; }
+    .floating-whatsapp .icon { width: 18px; height: 18px; }
+    .mobile-quickbar { display: none; }
+    .reveal { transition: opacity .8s ease, transform .85s cubic-bezier(.16,1,.3,1), filter .8s ease; }
+    .js-ready .reveal { opacity: 0; filter: blur(5px); transform: translate3d(0,24px,0) scale(.99); }
+    .js-ready .reveal.is-visible { opacity: 1; filter: blur(0); transform: translate3d(0,0,0) scale(1); }
+    .hero-float { animation: floatCard 6s ease-in-out 1.2s infinite; }
+    @keyframes floatCard { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    .button .icon { transition: transform .25s cubic-bezier(.2,.7,.2,1); }
+    .button:hover .icon { transform: translate(2px,-2px); }
+    .reveal-delay-1 { transition-delay: .08s; }
+    .reveal-delay-2 { transition-delay: .16s; }
+    .reveal-delay-3 { transition-delay: .24s; }
+
+    @media (max-width: 1050px) {
+      .nav-shell { gap: 17px; }
+      .brand { min-width: 185px; }
+      .main-nav { gap: 15px; }
+      .nav-cta { padding-inline: 14px; }
+      .hero-grid { gap: 42px; }
+      .hero-visual { min-height: 500px; }
+      .hero-photo-frame { height: 478px; --hero-curve: 190px; }
+      .team-grid { grid-template-columns: repeat(2,1fr); gap: 15px; }
+      .doctor-photo-frame { aspect-ratio: 1.35 / 1; }
+      .doctor-bio { min-height: 44px; }
+      .clinic-card { gap: 38px; }
+    }
+    @media (max-width: 820px) {
+      .container { width: min(var(--container), calc(100% - 44px)); }
+      .nav-shell { min-height: 72px; }
+      .menu-toggle { display: grid; margin-left: auto; }
+      .main-nav { position: absolute; top: calc(100% + 1px); right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 22px 19px; border-bottom: 1px solid var(--line); background: var(--cream); box-shadow: 0 18px 25px rgba(18,31,90,.09); }
+      .main-nav.is-open { display: flex; }
+      .main-nav > a:not(.nav-cta) { padding: 12px 4px; border-bottom: 1px solid var(--line); font-size: 13px; }
+      .main-nav .nav-cta { margin-top: 12px; }
+      .hero { padding: 37px 0 42px; }
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .hero h1 { font-size: clamp(42px,6.1vw,61px); }
+      .hero-visual { min-height: 410px; padding-left: 8px; }
+      .hero-photo-frame { height: 390px; --hero-curve: 150px; border-radius: 150px 17px 17px 17px; }
+      .hero-photo-back { left: 24px; border-radius: 150px 18px 18px 18px; }
+      .hero-stamp { right: -4px; width: 75px; height: 75px; border-width: 5px; }
+      .hero-stamp strong { font-size: 22px; }
+      .hero-stamp span { font-size: 6px; }
+      .hero-photo-caption { right: 16px; bottom: 37px; left: 24px; }
+      .photo-caption-label { display: none; }
+      .hero-float { max-width: 222px; padding: 11px 12px; }
+      .hero-float-avatar { width: 36px; height: 36px; flex-basis: 36px; }
+      .proof-item { padding-inline: 12px; }
+      .section { padding: 80px 0; }
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+      .approach-section { padding-bottom: 80px; }
+      .approach-panel { padding: 42px 38px; }
+      .clinic-card { gap: 28px; padding: 22px; }
+      .clinic-visual { min-height: 350px; }
+      .clinic-copy { padding-right: 6px; }
+      .reviews-grid { grid-template-columns: 1fr 1fr; }
+      .review-card.featured { grid-column: 1/-1; min-height: 205px; }
+      .faq-grid { grid-template-columns: .8fr 1.2fr; gap: 38px; }
+      .contact-section { padding: 74px 0; }
+    }
+    @media (max-width: 620px) {
+      html { scroll-padding-top: 75px; }
+      body { padding-bottom: 62px; }
+      .container { width: min(var(--container),calc(100% - 36px)); }
+      .topbar-inner { min-height: 33px; }
+      .topbar-place, .topbar-phone { font-size: 9px; }
+      .topbar .icon { width: 12px; height: 12px; }
+      .nav-shell { min-height: 66px; }
+      .brand { min-width: 0; gap: 9px; }
+      .brand-mark { width: 39px; height: 39px; flex-basis: 39px; border-radius: 12px; }
+      .brand-word strong { font-size: 15px; }
+      .brand-word small { margin-top: 5px; font-size: 7px; }
+      .hero { padding: 22px 0 35px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 22px; }
+      .hero-copy { padding: 15px 0 0; }
+      .eyebrow { font-size: 8px; }
+      .hero h1 { max-width: 500px; margin: 17px 0 14px; font-size: clamp(43px,11.3vw,61px); }
+      .hero-lead { max-width: 480px; font-size: 12px; }
+      .hero-actions { gap: 8px; margin-top: 20px; }
+      .button { min-height: 46px; padding-inline: 14px; font-size: 10px; }
+      .hero-proof { margin-top: 20px; }
+      .hero-visual { min-height: 340px; margin: 0 0 0 6px; padding: 0 10px 20px 0; }
+      .hero-photo-frame { height: min(88vw,360px); min-height: 285px; --hero-curve: 136px; border-radius: 136px 15px 15px 15px; }
+      .hero-photo-back { left: 22px; bottom: 18px; border-radius: 136px 15px 15px 15px; }
+      .hero-stamp { top: 13px; right: -5px; width: 68px; height: 68px; border-width: 4px; }
+      .hero-stamp strong { font-size: 20px; }
+      .hero-stamp span { margin-top: 4px; font-size: 5px; }
+      .hero-photo-caption { right: 13px; bottom: 30px; left: 19px; }
+      .photo-caption-mark { width: 27px; height: 27px; flex-basis: 27px; }
+      .photo-caption-text strong { font-size: 9px; }
+      .photo-caption-text small { font-size: 7px; }
+      .hero-float { left: -5px; bottom: 0; max-width: 211px; padding: 10px 11px; }
+      .hero-float-copy strong { font-size: 10px; }
+      .hero-float-copy span { font-size: 8px; }
+      .proof-grid { grid-template-columns: 1fr; padding: 7px 0; }
+      .proof-item { min-height: 48px; justify-content: flex-start; padding: 5px 7px; }
+      .proof-item + .proof-item { border-top: 1px solid var(--line); border-left: 0; }
+      .proof-number { min-width: 43px; font-size: 25px; text-align: center; }
+      .proof-copy strong { font-size: 10px; }
+      .proof-copy span { font-size: 8px; }
+      .section { padding: 68px 0; }
+      .section-header, .team-header, .reviews-head { display: block; margin-bottom: 27px; }
+      .section-heading h2 { font-size: clamp(34px,9vw,43px); }
+      .section-heading p { margin-top: 11px; font-size: 11px; }
+      .section-aside { margin-top: 12px; font-size: 10px; }
+      .services-grid { grid-template-columns: 1fr; gap: 10px; }
+      .service-card { min-height: 208px; padding: 20px; }
+      .service-card-top { margin-bottom: 14px; }
+      .service-icon { width: 41px; height: 41px; }
+      .service-card h3 { font-size: 17px; }
+      .service-card p { font-size: 10px; }
+      .clinical-note { font-size: 9px; }
+      .approach-section { padding-bottom: 68px; }
+      .approach-panel { padding: 34px 23px 28px; border-radius: 20px; }
+      .approach-head { display: block; }
+      .approach-panel h2 { margin-top: 12px; font-size: 36px; }
+      .approach-intro { margin-top: 12px; font-size: 10px; }
+      .steps-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 27px; }
+      .step { padding-top: 13px; }
+      .step-number { margin-bottom: 8px; }
+      .step p { max-width: none; font-size: 9px; }
+      .team-header .button { margin-top: 17px; }
+      .team-grid { grid-template-columns: 1fr; gap: 11px; }
+      .doctor-card { padding: 11px; }
+      .doctor-photo-frame { aspect-ratio: 1.28 / 1; }
+      .doctor-info { padding: 13px 9px 9px; }
+      .doctor-card h3 { font-size: 18px; }
+      .doctor-title, .doctor-bio { min-height: 0; }
+      .clinic-section { padding-top: 0; }
+      .clinic-card { grid-template-columns: 1fr; gap: 21px; padding: 13px; border-radius: 20px; }
+      .clinic-visual { min-height: 280px; }
+      .clinic-copy { padding: 0 8px 13px; }
+      .clinic-copy h2 { font-size: 38px; }
+      .clinic-copy > p { font-size: 10px; }
+      .clinic-points { gap: 10px; }
+      .clinic-points li { font-size: 9px; }
+      .review-context { max-width: none; margin-top: 11px; text-align: left; }
+      .reviews-grid { grid-template-columns: 1fr; gap: 10px; }
+      .review-card, .review-card.featured { grid-column: auto; min-height: 0; padding: 21px; }
+      .review-card blockquote { margin: 12px 0 18px; font-size: 13px; }
+      .review-card.featured blockquote { font-size: 15px; }
+      .faq-grid { grid-template-columns: 1fr; gap: 25px; }
+      .faq-intro { position: static; }
+      .faq-intro .button { margin-top: 15px; }
+      .faq-item summary { padding: 16px 0; font-size: 11px; }
+      .faq-item p { margin-right: 35px; font-size: 9px; }
+      .contact-section { padding: 65px 0 53px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 27px; }
+      .contact-copy h2 { font-size: 44px; }
+      .contact-copy > p { font-size: 10px; }
+      .contact-list { gap: 10px; margin-top: 20px; }
+      .contact-form-card { padding: 23px 18px 19px; border-radius: 17px; }
+      .form-title { font-size: 24px; }
+      .form-grid { grid-template-columns: 1fr; gap: 11px; }
+      .form-field.full { grid-column: auto; }
+      .footer-main { display: block; }
+      .footer-nav { gap: 11px 15px; margin-top: 20px; }
+      .footer-bottom { display: block; font-size: 8px; }
+      .footer-note { margin-top: 8px !important; text-align: left; }
+      .floating-whatsapp { display: none; }
+      .mobile-quickbar { position: fixed; z-index: 60; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: .78fr 1.22fr; gap: 8px; padding: 8px 11px calc(8px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(220,230,239,.95); background: rgba(251,250,247,.96); backdrop-filter: blur(14px); }
+      .mobile-quickbar a { min-height: 42px; display: flex; align-items: center; justify-content: center; gap: 7px; border-radius: 999px; font-size: 10px; font-weight: 790; }
+      .mobile-call { border: 1px solid #dce3ed; color: var(--navy); background: #fff; }
+      .mobile-chat { color: #fff; background: #18855f; }
+      .mobile-quickbar .icon { width: 15px; height: 15px; }
+    }
+    @media (max-width: 370px) {
+      .container { width: calc(100% - 28px); }
+      .topbar-place { max-width: 170px; }
+      .hero h1 { font-size: 42px; }
+      .hero-actions .button { padding-inline: 11px; font-size: 9px; }
+      .clinic-points { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .js-ready .reveal { opacity: 1; filter: none; transform: none; }
+      .js-ready .hero-title-line > span { opacity: 1; transform: none; animation: none; }
+      .hero-photo-frame { clip-path: none !important; transform: none !important; }
+      .parallax-photo { transform: none !important; }
+      .hero-float { animation: none; }
+    }
+  
+
+    /* Refined editorial direction — quieter typography, blue tones, clearer hierarchy */
+    html { scroll-padding-top: 90px; }
+    body { color: var(--ink); background: var(--cream); font-size: 16px; line-height: 1.65; -webkit-text-size-adjust: 100%; }
+    h1, h2, h3, p, blockquote { text-wrap: pretty; }
+    ::selection { color: #fff; background: var(--teal-dark); }
+    :focus-visible { outline-color: #78a6d6; }
+    .scroll-progress { height: 3px; background: #5f91c7; }
+
+    /* Calm utility line and navigation */
+    .topbar { color: var(--navy); background: #edf4fb; }
+    .topbar .icon { color: var(--teal-dark); }
+    .topbar-phone:hover { color: #214f84; }
+    .site-header { border-bottom-color: var(--line); background: rgba(248,251,254,.95); backdrop-filter: blur(16px); }
+    .nav-shell { min-height: 76px; }
+    .brand-mark { border: 1px solid var(--line); border-radius: 5px; background: #fff; box-shadow: none; }
+    .brand-word strong { color: var(--navy); letter-spacing: .08em; }
+    .brand-word small { color: var(--muted); }
+    .main-nav > a:not(.nav-cta) { color: #526681; font-size: 12px; }
+    .main-nav > a:not(.nav-cta):hover, .main-nav > a.active { color: var(--teal-dark); }
+    .nav-cta { min-height: 43px; padding-inline: 16px; border: 1px solid var(--navy); border-radius: 4px; color: #fff; background: var(--navy); box-shadow: none; font-size: 11px; letter-spacing: .01em; text-transform: none; }
+    .nav-cta:hover { color: #fff; background: var(--navy-2); box-shadow: none; }
+    .menu-toggle { border-color: var(--line); border-radius: 5px; color: var(--navy); background: #fff; }
+
+    /* Photo-led hero with a restrained editorial title */
+    .hero { min-height: 0; padding: 57px 0 58px; color: var(--ink); background: #f2f7fc; }
+    .hero::before { display: block; top: -230px; right: -150px; bottom: auto; left: auto; width: 510px; height: 510px; border: 1px solid rgba(49,105,169,.11); border-radius: 50%; background: none; box-shadow: 0 0 0 27px rgba(49,105,169,.035),0 0 0 62px rgba(49,105,169,.025); opacity: 1; }
+    .hero::after { display: none; }
+    .hero-grid { grid-template-columns: 1fr 1fr; gap: clamp(32px,5.4vw,72px); }
+    .hero-copy { padding: 15px 0 24px; }
+    .hero .eyebrow { color: var(--teal-dark); }
+    .hero .eyebrow-dot { background: #6a9acb; box-shadow: 0 0 0 4px rgba(106,154,203,.13); }
+    .hero h1 { max-width: 600px; margin: 25px 0 22px; color: var(--navy); font: 500 clamp(53px,5.8vw,78px)/1.02 var(--serif); letter-spacing: -.06em; text-transform: none; }
+    .hero-title-line { overflow: hidden; line-height: 1.02; padding: .105em 0 .045em; margin: -.105em 0 -.045em; }
+    .hero-title-line > span { display: inline-block; white-space: nowrap; }
+    
+    
+    .hero h1 em { color: var(--teal-dark); font-style: italic; font-weight: 500; }
+    .js-ready .hero-title-line:nth-child(1) > span { animation-delay: .08s; }
+    .js-ready .hero-title-line:nth-child(2) > span { animation-delay: .2s; }
+    .js-ready .hero-title-line:nth-child(3) > span { animation-delay: .32s; }
+    .hero-lead { max-width: 450px; color: var(--body); font-size: 14px; line-height: 1.75; }
+    .hero-actions { gap: 10px; margin-top: 25px; }
+    .button { min-height: 48px; padding: 0 17px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+    .button-primary { color: #fff; background: var(--navy); box-shadow: none; }
+    .button-primary:hover { color: #fff; background: var(--navy-2); box-shadow: none; }
+    .button-outline { border-color: #b8cbe0; color: var(--navy); background: rgba(255,255,255,.5); }
+    .button-outline:hover { border-color: var(--teal-dark); color: var(--teal-dark); background: #fff; }
+    .hero-proof { margin-top: 25px; }
+    .hero-proof-icon { border: 1px solid #cbdced; border-radius: 50%; color: var(--teal-dark); background: #fff; }
+    .hero-proof-text strong { color: var(--navy); font-size: 11px; }
+    .hero-proof-text span { color: var(--muted); font-size: 10px; }
+    .hero-visual { min-height: 535px; padding: 0 14px 18px 19px; }
+    .hero-visual::before { top: 51%; left: 0; padding: 8px 6px; border: 1px solid var(--line); color: var(--teal-dark); background: #fff; content: 'DENTPOLL  /  ELAZIĞ'; font-size: 7px; font-weight: 750; letter-spacing: .12em; }
+    .hero-visual::after { right: 12px; bottom: 1px; color: #7085a0; content: '01 — DENTPOLL DENTAL'; font-size: 8px; font-weight: 700; letter-spacing: .12em; }
+    .hero-photo-back { top: 18px; right: 0; bottom: 0; left: 39px; border: 0; border-radius: 3px; background: #d5e7f7; transform: rotate(1.2deg); transition: transform .8s cubic-bezier(.16,1,.3,1); }
+    .hero-visual.is-visible .hero-photo-back { transform: rotate(0) translate(4px,4px); }
+    .hero-photo-frame { --hero-curve: 4px; height: 510px; border: 5px solid #fff; border-radius: 4px; box-shadow: 0 19px 43px rgba(16,42,82,.12); }
+    .js-ready .hero-visual:not(.is-visible) .hero-photo-frame { clip-path: inset(0 4% 0 4% round 4px); }
+    .js-ready .hero-visual.is-visible .hero-photo-frame { clip-path: inset(0 round 4px); }
+    .hero-photo-frame::after { inset: 58% 0 0; background: linear-gradient(180deg,transparent,rgba(16,42,82,.43)); }
+    .hero-photo { filter: saturate(.95) contrast(1.02); }
+    .hero-photo-caption { right: 17px; bottom: 24px; left: 22px; }
+    .photo-caption-mark { border: 1px solid rgba(255,255,255,.62); border-radius: 50%; color: #fff; background: rgba(255,255,255,.14); }
+    .photo-caption-label { padding: 6px 9px; border-radius: 999px; color: #fff; background: rgba(16,42,82,.35); font-size: 8px; }
+    .hero-stamp { top: 19px; right: -2px; width: 72px; height: 72px; border: 4px solid #fff; border-radius: 50%; color: #fff; background: var(--teal-dark); transform: rotate(0); box-shadow: 0 8px 20px rgba(16,42,82,.14); }
+    .hero-stamp strong { font: 600 22px/.95 var(--serif); letter-spacing: -.04em; }
+    .hero-stamp span { margin-top: 4px; font-size: 6px; letter-spacing: .08em; }
+    .hero-float { left: 0; bottom: 0; max-width: 252px; padding: 11px 13px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); background: #fff; box-shadow: 0 10px 25px rgba(16,42,82,.12); animation-duration: 7s; }
+    .hero-float-avatar { border: 2px solid #fff; border-radius: 50%; box-shadow: 0 0 0 1px var(--line); }
+    .hero-float-copy strong { color: var(--navy); font-size: 10px; }
+    .hero-float-copy span { color: var(--muted); font-size: 9px; }
+
+    /* Quiet credibility strip and slow-moving wordmark */
+    .proof-band { border-block: 1px solid var(--line); color: var(--navy); background: #fff; }
+    .proof-grid { padding: 9px 0; }
+    .proof-item { min-height: 72px; padding-inline: 24px; }
+    .proof-item + .proof-item { border-left-color: var(--line); }
+    .proof-number { color: var(--teal-dark); font: 600 31px/.95 var(--serif); letter-spacing: -.05em; }
+    .proof-copy strong { color: var(--navy); font-size: 10px; font-weight: 750; letter-spacing: .035em; text-transform: none; }
+    .proof-copy span { color: var(--muted); font-size: 9px; line-height: 1.5; }
+    .marquee-band { overflow: hidden; padding: 10px 0; color: var(--navy); background: #e8f1fa; }
+    .marquee-clip { overflow: hidden; }
+    .marquee-track { width: max-content; display: flex; align-items: center; gap: 24px; animation: marqueMove 42s linear infinite; white-space: nowrap; }
+    @keyframes marqueMove { to { transform: translateX(-50%); } }
+    .marquee-track span { font-size: 10px; font-weight: 750; letter-spacing: .12em; }
+    .marquee-track i { color: var(--teal-dark); font-size: 15px; }
+
+    /* Clearer section rhythm and restrained service cards */
+    .section { padding: 104px 0; }
+    .section-header { align-items: flex-end; gap: 30px; margin-bottom: 42px; }
+    .section-heading .eyebrow, .clinic-copy .eyebrow { color: var(--teal-dark); }
+    .section-heading h2 { max-width: 740px; color: var(--navy); font: 500 clamp(35px,4.4vw,57px)/1.06 var(--serif); letter-spacing: -.055em; text-transform: none; text-wrap: balance; }
+    .section-heading h2 em { color: var(--teal-dark); font-style: italic; font-weight: 500; }
+    .section-heading p, .section-aside { color: var(--body); font-size: 13px; line-height: 1.72; }
+    .section-aside { max-width: 330px; padding-left: 15px; border-left: 2px solid #afc8e3; }
+    .services-section { background: var(--cream); }
+    .services-section::before { display: none; }
+    .services-grid { gap: 14px; border: 0; }
+    .service-card { min-width: 0; min-height: 232px; padding: 22px; border: 1px solid var(--line); border-top: 2px solid #b8cfe7; border-radius: 4px; background: #fff; box-shadow: 0 6px 18px rgba(16,42,82,.035); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease; }
+    .service-card:hover { transform: translateY(-3px); border-color: #aec5df; background: #fff; box-shadow: 0 12px 26px rgba(16,42,82,.08); }
+    .service-card.featured { border: 1px solid #c7dced; border-top: 2px solid var(--teal-dark); border-radius: 4px; color: var(--ink); background: #f0f6fc; box-shadow: none; }
+    .service-card.featured:hover { background: #eaf3fb; }
+    .service-card.featured::after { display: none; }
+    .service-card-top { margin-bottom: 17px; }
+    .service-icon { width: 42px; height: 42px; border-radius: 8px; color: var(--teal-dark); background: var(--teal-pale); }
+    .featured .service-icon { color: var(--teal-dark); background: #deebf8; }
+    .service-index, .featured .service-index { color: #8295ad; font: 700 12px var(--sans); letter-spacing: .02em; }
+    .service-card h3, .service-card.featured h3 { color: var(--navy); font: 650 18px/1.2 var(--sans); letter-spacing: -.025em; text-transform: none; text-wrap: balance; }
+    .service-card p, .service-card.featured p { color: var(--body); font-size: 12px; line-height: 1.65; }
+    .service-link, .featured .service-link { color: var(--teal-dark); font-size: 10px; font-weight: 750; letter-spacing: 0; text-transform: none; }
+    .clinical-note { margin-top: 22px; color: var(--muted); font-size: 11px; line-height: 1.55; }
+    .clinical-note .icon { color: var(--teal-dark); }
+
+    /* A light process panel replaces the oversized colour block */
+    .approach-section { padding: 63px 0; background: #edf4fb; }
+    .approach-panel { padding: 43px 45px 39px; border: 1px solid #dce7f2; border-radius: 5px; color: var(--ink); background: #fff; }
+    .approach-panel::before { top: -210px; right: -125px; width: 370px; height: 370px; border: 1px solid rgba(49,105,169,.11); border-radius: 50%; box-shadow: 0 0 0 25px rgba(49,105,169,.025); transform: none; }
+    .approach-panel .eyebrow { color: var(--teal-dark); }
+    .approach-panel h2 { max-width: 580px; color: var(--navy); font: 500 clamp(34px,4vw,48px)/1.06 var(--serif); letter-spacing: -.045em; text-transform: none; }
+    .approach-panel h2 em { color: var(--teal-dark); font-style: italic; font-weight: 500; }
+    .approach-intro { max-width: 350px; color: var(--body); font-size: 12px; line-height: 1.7; }
+    .steps-grid { gap: 22px; margin-top: 35px; }
+    .step { padding-top: 16px; border-top: 1px solid var(--line); }
+    .step-number { color: var(--teal-dark); font-size: 9px; letter-spacing: .11em; }
+    .step-number::before { width: 6px; height: 6px; border-radius: 50%; background: #83acd4; }
+    .step h3 { color: var(--navy); font-size: 13px; line-height: 1.35; text-transform: none; }
+    .step p { color: var(--body); font-size: 11px; line-height: 1.62; }
+
+    /* Real clinician portraits with a calm, consistent roster */
+    .team-section { color: var(--ink); background: #f7fafe; }
+    .team-section .section-heading h2 { color: var(--navy); }
+    .team-section .section-heading h2 em { color: var(--teal-dark); }
+    .team-section .section-heading p { color: var(--body); }
+    .team-section .eyebrow { color: var(--teal-dark); }
+    .team-header { margin-bottom: 38px; }
+    .team-grid { gap: 15px; }
+    .doctor-card { min-width: 0; padding: 9px; border: 1px solid var(--line); border-radius: 5px; background: #fff; transition: border-color .25s ease, box-shadow .25s ease; }
+    .doctor-card:hover { transform: translateY(-2px); border-color: #b6cce3; box-shadow: 0 10px 24px rgba(16,42,82,.07); }
+    .doctor-photo-frame { aspect-ratio: .92 / 1; border-radius: 3px; background: #e5edf6; }
+    .doctor-photo { filter: saturate(.94); }
+    .doctor-card:hover .doctor-photo { filter: saturate(1); transform: scale(1.025); }
+    .doctor-tag { left: 8px; bottom: 8px; max-width: calc(100% - 16px); padding: 6px 9px; border: 1px solid rgba(255,255,255,.85); border-radius: 3px; color: var(--navy); background: rgba(255,255,255,.94); font-size: 8px; letter-spacing: .08em; backdrop-filter: blur(6px); }
+    .doctor-info { padding: 12px 6px 7px; }
+    .doctor-card h3 { color: var(--navy); font: 650 15px/1.2 var(--sans); letter-spacing: -.02em; text-transform: none; text-wrap: balance; }
+    .doctor-title { min-height: 27px; color: var(--teal-dark); font-size: 9px; line-height: 1.45; letter-spacing: .015em; text-transform: none; }
+    .doctor-bio { min-height: 0; color: var(--body); font-size: 11px; line-height: 1.58; }
+    .doctor-more { margin-top: 10px; color: var(--teal-dark); font-size: 10px; text-transform: none; }
+
+    /* Clinic feature: open layout, strong photography, quiet details */
+    .clinic-section { padding: 92px 0; background: #fff; }
+    .clinic-card { grid-template-columns: 1.03fr .97fr; gap: clamp(30px,5vw,65px); padding: 20px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+    .clinic-visual { min-height: 430px; border-radius: 3px; background: #e8f0f8; }
+    .clinic-visual::after { inset: 65% 0 0; background: linear-gradient(180deg,transparent,rgba(16,42,82,.35)); }
+    .clinic-chip { left: 12px; bottom: 12px; padding: 8px 11px; border: 1px solid rgba(255,255,255,.8); border-radius: 4px; color: var(--navy); background: rgba(255,255,255,.94); box-shadow: none; font-size: 9px; text-transform: none; letter-spacing: 0; }
+    .clinic-chip .icon { color: var(--teal-dark); }
+    .clinic-copy { padding: 18px 12px 18px 0; }
+    .clinic-copy h2 { max-width: 490px; color: var(--navy); font: 500 clamp(35px,4.2vw,54px)/1.06 var(--serif); letter-spacing: -.05em; text-transform: none; text-wrap: balance; }
+    .clinic-copy h2 em { color: var(--teal-dark); font-style: italic; font-weight: 500; }
+    .clinic-copy > p { color: var(--body); font-size: 12px; line-height: 1.75; }
+    .clinic-points { gap: 11px 14px; margin: 21px 0 24px; }
+    .clinic-points li { color: var(--ink); font-size: 10px; line-height: 1.45; text-transform: none; }
+    .clinic-points .icon { color: var(--teal-dark); }
+
+    /* Patient voices: editorial pull quote without a heavy colour panel */
+    .reviews-section { background: #edf4fb; }
+    .reviews-head { margin-bottom: 34px; }
+    .reviews-head .section-heading h2 { font-size: clamp(36px,4.4vw,56px); line-height: 1.06; letter-spacing: -.05em; }
+    .review-context { max-width: 280px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+    .reviews-grid { grid-template-columns: 1.12fr 1fr 1fr; gap: 13px; }
+    .review-card { min-height: 230px; padding: 21px; border: 1px solid #d7e2ee; border-radius: 4px; background: #fff; }
+    .review-card.featured { grid-column: auto; display: flex; grid-template-columns: none; gap: 0; padding: 22px; border: 1px solid #cad9e9; border-radius: 4px; color: var(--ink); background: #f8fbfe; box-shadow: none; }
+    .quote-mark { color: #77a3d1; font: 500 48px/.8 var(--serif); }
+    .review-card blockquote { margin: 14px 0 18px; color: var(--body); font: 500 14px/1.58 var(--serif); }
+    .review-card.featured blockquote { color: var(--navy); font: 500 17px/1.4 var(--serif); letter-spacing: -.01em; }
+    .review-person, .review-card.featured .review-person { padding-top: 11px; border-top: 1px solid var(--line); }
+    .review-avatar { border-radius: 50%; color: #fff; background: var(--teal-dark); font: 600 9px var(--sans); }
+    .review-person span, .review-card.featured .review-person span { color: var(--muted); font-size: 9px; }
+
+    /* Accessible FAQ and approachable contact form */
+    .faq-section { background: #fff; }
+    .faq-list { border-top: 1px solid #cbd9e8; }
+    .faq-search { display: flex; align-items: center; gap: 10px; margin: 13px 0 12px; padding: 0 12px; border: 1px solid #d3dfec; border-radius: 4px; color: var(--teal-dark); background: #fff; transition: border-color .2s ease, box-shadow .2s ease; }
+    .faq-search:focus-within { border-color: #8eafd2; box-shadow: 0 0 0 3px rgba(109,157,206,.13); }
+    .faq-search .icon { width: 17px; height: 17px; }
+    .faq-search input { width: 100%; min-width: 0; height: 44px; border: 0; outline: 0; color: var(--ink); background: transparent; font: 400 12px/1.4 var(--sans); }
+    .faq-search input::placeholder { color: #8594a9; }
+    .faq-empty { margin: 14px 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+    .faq-item[hidden] { display: none; }
+    .faq-item { border-bottom-color: var(--line); }
+    .faq-item summary { min-height: 58px; padding: 16px 0; color: var(--navy); font-size: 12px; line-height: 1.45; font-weight: 700; text-transform: none; }
+    .faq-plus { border-color: #ccdae9; border-radius: 50%; color: var(--teal-dark); }
+    .faq-item[open] .faq-plus { color: #fff; background: var(--teal-dark); }
+    .faq-item p { color: var(--body); font-size: 11px; line-height: 1.68; }
+    .contact-section { padding: 88px 0; color: var(--ink); background: #edf4fb; }
+    .contact-section::before { top: -255px; right: -135px; left: auto; width: 500px; height: 500px; border: 1px solid rgba(49,105,169,.1); border-radius: 50%; box-shadow: 0 0 0 26px rgba(49,105,169,.025); transform: none; }
+    .contact-copy .eyebrow { color: var(--teal-dark); }
+    .contact-copy h2 { max-width: 510px; color: var(--navy); font: 500 clamp(38px,4.5vw,59px)/1.05 var(--serif); letter-spacing: -.055em; text-transform: none; text-wrap: balance; }
+    .contact-copy h2 em { color: var(--teal-dark); font-style: italic; font-weight: 500; }
+    .contact-copy > p { color: var(--body); font-size: 12px; line-height: 1.72; }
+    .contact-item small { color: var(--teal-dark); font-size: 8px; }
+    .contact-icon { border: 1px solid #d0dfef; border-radius: 50%; color: var(--teal-dark); background: #fff; }
+    .contact-item a { color: var(--navy); }
+    .contact-item a:hover { color: var(--teal-dark); }
+    .contact-item a, .contact-item address { font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+    .contact-vcard { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 9px 12px; border: 1px solid #cbd9e8; border-radius: 4px; color: var(--teal-dark); background: rgba(255,255,255,.55); font-size: 11px; font-weight: 650; transition: background .2s ease, border-color .2s ease; }
+    .contact-vcard:hover { border-color: #a9c2dd; background: #fff; }
+    .contact-vcard .icon { width: 16px; height: 16px; }
+    .contact-form-card { min-width: 0; padding: 27px; border: 1px solid var(--line); border-left: 4px solid #8db4dc; border-radius: 5px; color: var(--ink); background: #fff; box-shadow: 0 12px 32px rgba(16,42,82,.09); }
+    .form-title { color: var(--navy); font: 600 23px/1.12 var(--sans); letter-spacing: -.035em; text-transform: none; }
+    .form-subtitle { color: var(--muted); font-size: 10px; line-height: 1.6; }
+    .form-field label { color: var(--navy); font-size: 9px; font-weight: 700; letter-spacing: .01em; text-transform: none; }
+    .form-field input, .form-field select, .form-field textarea { min-height: 43px; border: 1px solid #ccd9e7; border-radius: 4px; color: var(--ink); background: #fbfdff; font-size: 11px; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: #6d9dce; outline: 2px solid rgba(109,157,206,.2); }
+    .form-field textarea { min-height: 90px; }
+    .form-submit { width: 100%; }
+    .form-privacy { color: var(--muted); font-size: 9px; line-height: 1.55; }
+    .form-disclaimer { color: var(--muted); font-size: 8px; line-height: 1.55; }
+    .form-status { color: var(--teal-dark); }
+    .footer { padding: 28px 0 22px; color: rgba(255,255,255,.76); background: #102a52; }
+    .footer .brand-mark { border-radius: 5px; }
+    .footer-nav a { font-size: 10px; }
+    .footer-nav a:hover { color: #c6e2fa; }
+    .footer-bottom { font-size: 9px; line-height: 1.55; }
+    .floating-whatsapp { right: 18px; bottom: 18px; border: 0; border-radius: 999px; color: #fff; background: #2862a7; box-shadow: 0 9px 22px rgba(16,42,82,.18); font-size: 10px; }
+    .floating-whatsapp:hover { background: #1d4f89; }
+    .back-to-top { position: fixed; z-index: 44; right: 22px; bottom: 82px; width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; color: var(--navy); background: #fff; box-shadow: 0 6px 20px rgba(16,42,82,.11); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(7px); transition: opacity .2s ease, visibility .2s ease, transform .2s ease, background .2s ease, color .2s ease; }
+    .back-to-top.is-visible { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
+    .back-to-top:hover { color: #fff; background: var(--navy); }
+    .back-to-top .icon { width: 18px; height: 18px; }
+
+    @media (max-width: 1050px) {
+      .hero-grid { gap: 30px; }
+      .hero h1 { font-size: clamp(49px,6vw,64px); }
+      .hero-visual { min-height: 475px; }
+      .hero-photo-frame { height: 455px; }
+      .section { padding-block: 88px; }
+      .reviews-grid { grid-template-columns: 1fr 1fr; }
+      .review-card.featured { grid-column: 1/-1; min-height: 190px; }
+    }
+    @media (max-width: 820px) {
+      .main-nav { border-bottom-color: var(--line); background: #fff; box-shadow: 0 14px 25px rgba(16,42,82,.08); }
+      .main-nav > a:not(.nav-cta) { border-bottom-color: var(--line); color: #4f6380; }
+      .hero-grid { grid-template-columns: 1fr .95fr; gap: 22px; }
+      .hero h1 { font-size: clamp(48px,5.8vw,58px); }
+      .hero-visual { min-height: 405px; padding-left: 12px; }
+      .hero-photo-frame { height: 390px; }
+      .hero-stamp { width: 64px; height: 64px; }
+      .hero-stamp strong { font-size: 19px; }
+      .proof-item { padding-inline: 14px; }
+      .approach-section { padding-block: 48px; }
+      .approach-panel { padding: 34px 29px; }
+      .clinic-card { gap: 25px; padding: 16px; }
+      .clinic-visual { min-height: 360px; }
+      .contact-grid { gap: 32px; }
+    }
+    @media (max-width: 760px) {
+      .hero { padding: 38px 0 43px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 25px; }
+      .hero-copy { padding-top: 4px; }
+      .hero h1 { max-width: 600px; font-size: clamp(53px,9.4vw,70px); }
+      .hero-lead { max-width: 530px; }
+      .hero-visual { max-width: 620px; min-height: 0; margin-left: auto; padding: 0 13px 17px 18px; }
+      .hero-photo-frame { height: min(69vw,460px); min-height: 320px; }
+      .hero-photo-back { left: 31px; }
+      .hero-float { left: 5px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-copy { max-width: 590px; }
+    }
+    @media (max-width: 620px) {
+      html { scroll-padding-top: 74px; }
+      .container { width: min(var(--container),calc(100% - 36px)); }
+      .hero { padding: 31px 0 35px; }
+      .hero h1 { margin: 20px 0 19px; font-size: clamp(47px,10.5vw,59px); }
+      .hero-lead { font-size: 13px; line-height: 1.65; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; gap: 8px; }
+      .hero-actions .button { min-height: 46px; justify-content: space-between; padding-inline: 14px; font-size: 10px; }
+      .hero-proof { margin-top: 19px; }
+      .hero-visual { margin-left: 0; padding: 0 9px 15px 13px; }
+      .hero-photo-frame { height: min(88vw,370px); min-height: 280px; }
+      .hero-photo-back { left: 20px; bottom: 7px; }
+      .hero-visual::before { left: 0; padding: 7px 5px; font-size: 6px; }
+      .hero-visual::after { right: 6px; bottom: 0; font-size: 6px; }
+      .hero-stamp { top: 12px; right: -4px; width: 58px; height: 58px; border-width: 3px; }
+      .hero-stamp strong { font-size: 17px; }
+      .hero-stamp span { font-size: 5px; }
+      .hero-float { max-width: 215px; padding: 9px 10px; }
+      .hero-photo-caption { right: 11px; bottom: 21px; left: 12px; }
+      .proof-grid { grid-template-columns: 1fr; padding: 5px 0; }
+      .proof-item { min-height: 49px; padding: 5px 8px; }
+      .proof-item + .proof-item { border-top: 1px solid var(--line); border-left: 0; }
+      .proof-number { min-width: 44px; font-size: 25px; text-align: center; }
+      .proof-copy strong { font-size: 9px; }
+      .proof-copy span { font-size: 8px; }
+      .marquee-band { padding: 9px 0; }
+      .marquee-track { gap: 17px; }
+      .marquee-track span { font-size: 9px; }
+      .section { padding-block: 64px; }
+      .section-header, .team-header, .reviews-head { display: block; margin-bottom: 29px; }
+      .section-heading h2, .reviews-head .section-heading h2, .faq-intro .section-heading h2 { font-size: clamp(32px,8.2vw,43px); line-height: 1.05; }
+      .section-heading p, .section-aside { font-size: 12px; line-height: 1.65; }
+      .section-aside { margin-top: 15px; }
+      .services-grid { grid-template-columns: 1fr; gap: 10px; }
+      .service-card { min-height: 200px; padding: 19px; }
+      .service-card h3 { font-size: 18px; }
+      .service-card p { font-size: 12px; }
+      .approach-section { padding: 34px 0; }
+      .approach-panel { padding: 28px 20px 24px; }
+      .approach-panel h2 { font-size: 35px; }
+      .approach-head { display: block; }
+      .approach-intro { margin-top: 12px; font-size: 11px; }
+      .steps-grid { grid-template-columns: 1fr; gap: 15px; margin-top: 27px; }
+      .step { padding-top: 12px; }
+      .step h3 { font-size: 13px; }
+      .step p { font-size: 11px; }
+      .team-header .button { margin-top: 15px; }
+      .team-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px 11px; }
+      .doctor-card { padding: 6px; }
+      .doctor-photo-frame { aspect-ratio: .82 / 1; }
+      .doctor-info { padding: 10px 4px 6px; }
+      .doctor-card h3 { font-size: 13px; line-height: 1.2; }
+      .doctor-title { min-height: 0; font-size: 8px; }
+      .doctor-bio { font-size: 10px; line-height: 1.5; }
+      .doctor-more { font-size: 9px; }
+      .clinic-section { padding: 62px 0; }
+      .clinic-card { grid-template-columns: 1fr; gap: 19px; padding: 12px; }
+      .clinic-visual { min-height: 280px; }
+      .clinic-copy { padding: 5px 7px 10px; }
+      .clinic-copy h2 { font-size: 38px; }
+      .clinic-copy > p { font-size: 11px; }
+      .clinic-points { gap: 10px; }
+      .clinic-points li { font-size: 9px; }
+      .reviews-grid { grid-template-columns: 1fr; gap: 10px; }
+      .review-card, .review-card.featured { grid-column: auto; min-height: 0; padding: 19px; }
+      .review-card blockquote { font-size: 14px; }
+      .review-card.featured blockquote { font-size: 16px; }
+      .review-context { margin-top: 12px; text-align: left; }
+      .faq-grid { grid-template-columns: 1fr; gap: 24px; }
+      .faq-intro { position: static; }
+      .faq-item summary { min-height: 53px; font-size: 11px; }
+      .faq-item p { font-size: 10px; }
+      .contact-section { padding: 63px 0 50px; }
+      .contact-copy h2 { font-size: clamp(36px,9.8vw,50px); }
+      .contact-copy > p { font-size: 11px; }
+      .contact-grid { gap: 25px; }
+      .contact-list { gap: 10px; margin-top: 20px; }
+      .contact-form-card { padding: 21px 15px 17px; border-left-width: 3px; }
+      .form-title { font-size: 21px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-field.full { grid-column: auto; }
+      .form-field input, .form-field select, .form-field textarea { font-size: 12px; }
+      .footer-main { display: block; }
+      .footer-nav { justify-content: flex-start; gap: 10px 14px; margin-top: 17px; }
+      .footer-bottom { display: block; }
+      .footer-note { margin-top: 7px !important; text-align: left; }
+      .floating-whatsapp { display: none; }
+      .mobile-quickbar { border-color: var(--line); background: rgba(248,251,254,.97); }
+      .mobile-quickbar a { min-height: 42px; border-radius: 4px; font-size: 10px; text-transform: none; letter-spacing: 0; }
+      .mobile-call { border: 1px solid #cbd9e8; color: var(--navy); background: #fff; }
+      .mobile-chat { color: #fff; background: var(--navy); }
+      .back-to-top { right: 14px; bottom: calc(72px + env(safe-area-inset-bottom)); width: 40px; height: 40px; }
+    }
+    @media (max-width: 370px) {
+      .hero h1 { font-size: 44px; }
+      .doctor-card h3 { font-size: 12px; }
+      .hero-float { max-width: 205px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track, .hero-float { animation: none !important; }
+      .hero-photo-back, .hero-visual.is-visible .hero-photo-back { transform: none !important; }
+      .hero-photo-frame { clip-path: none !important; transform: none !important; }
+      .parallax-photo, .clinic-visual img { transform: none !important; }
+    }
+    </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dentpoll Dental",
+    "url": "https://www.dentpolldental.com/",
+    "telephone": "+90 534 617 68 45",
+    "email": "dentpolldental@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cumhuriyet Mahallesi, Polatlar Camii karşısı, Akgün AVM altı",
+      "addressLocality": "Elazığ",
+      "addressCountry": "TR"
+    }
+  }
+  </script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Ana içeriğe geç</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4.5 12h14M13 6.5l5.5 5.5-5.5 5.5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10.2c0 5-8 11.3-8 11.3S4 15.2 4 10.2a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M21 16.4v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.6 2 2 0 0 1 3.1 1.4h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.4a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2.1Z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.6a8.5 8.5 0 1 1 16.3-3.9Z"/><path d="M8.5 9.1c.3 2.4 2 4.2 4.4 4.8"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3 1.4 5.1L18 10l-4.6 1.5L12 17l-1.4-5.5L6 10l4.6-1.9L12 3Z"/><path d="m19 14 .8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14ZM5 2l.6 1.7L7.5 4.5l-1.9.6L5 7l-.6-1.9-1.9-.6 1.9-.8L5 2Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 8.7c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.7 4.7 0 0 1 8.8-2.1 4.7 4.7 0 0 1 8.8 2.1Z"/><path d="M3 12h4l2-3 3 6 2-3h7"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M8 14s1.4 2.5 4 2.5 4-2.5 4-2.5M9 9h.01M15 9h.01"/></symbol>
+    <symbol id="i-diamond" viewBox="0 0 24 24"><path d="m12 2 9 8-9 12L3 10l9-8Z"/><path d="M3 10h18M8 3l4 7 4-7M8 10l4 12 4-12"/></symbol>
+    <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 3.2c-2.1-1.6-5.7-1.2-7.3.5-1.9 2-1.4 5.7-.4 8.7l1.4 4.6c.6 1.9 1.5 3.6 2.6 3.6 1.2 0 1.5-2 2.1-3.8.3-.9.8-1.5 1.6-1.5s1.3.6 1.6 1.5c.6 1.8.9 3.8 2.1 3.8 1.1 0 2-1.7 2.6-3.6l1.4-4.6c1-3 1.5-6.7-.4-8.7-1.6-1.7-5.2-2.1-7.3-.5Z"/></symbol>
+    <symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21v-1a7 7 0 0 1 14 0v1M10 8h.01M14 8h.01M10 10c.6.7 1.3 1 2 1s1.4-.3 2-1"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.4 4.2L19 7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-contact" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M6 16c.7-2 5.3-2 6 0M14 9h4M14 13h4M14 17h4"/></symbol>
+  </svg>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-place"><svg class="icon"><use href="#i-pin"/></svg> Cumhuriyet Mahallesi · Elazığ</span>
+      <a class="topbar-phone" href="tel:+905346176845"><svg class="icon"><use href="#i-phone"/></svg> 0 534 617 68 45</a>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="Dentpoll Dental ana sayfa">
+        <span class="brand-mark"><img src="assets/dentpoll-mark.png" alt=""></span>
+        <span class="brand-word"><strong>DENTPOLL</strong><small>DENTAL · ELAZIĞ</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mainNav"><svg class="icon menu-icon"><use href="#i-menu"/></svg></button>
+      <nav class="main-nav" id="mainNav" aria-label="Ana menü">
+        <a href="#tedaviler">Tedaviler</a>
+        <a href="#hekimler">Hekimlerimiz</a>
+        <a href="#klinik">Kliniğimiz</a>
+        <a href="#yorumlar">Hasta deneyimleri</a>
+        <a href="#sss">Sık sorulanlar</a>
+        <a class="nav-cta" href="https://wa.me/905346176845?text=Merhaba%20Dentpoll%20Dental%2C%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Randevu oluştur <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Dentpoll Dental · Elazığ</span>
+          <h1 id="hero-title"><span class="hero-title-line"><span>Elazığ'ın</span></span><span class="hero-title-line"><span><em>gülüşü</em> burada</span></span><span class="hero-title-line"><span>parlasın.</span></span></h1>
+          <p class="hero-lead">Ağız ve diş sağlığınızı deneyimli hekim kadromuzla, size özel ve güven veren bir yaklaşımla ele alıyoruz. İlk adım için bize ulaşın.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://wa.me/905346176845?text=Merhaba%20Dentpoll%20Dental%2C%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">WhatsApp'tan randevu <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="button button-outline" href="#hekimler">Hekimlerimizi tanıyın <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </div>
+          <div class="hero-proof">
+            <span class="hero-proof-icon"><svg class="icon"><use href="#i-shield"/></svg></span>
+            <span class="hero-proof-text"><strong>Kurucumuzun 10 yılı aşkın Elazığ deneyimi</strong><span>Hasta odaklı, güncel diş hekimliği yaklaşımı</span></span>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-1">
+          <div class="hero-photo-back" aria-hidden="true"></div>
+          <div class="hero-photo-frame">
+            <img class="hero-photo parallax-photo" data-parallax src="assets/hero-dental.jpg" alt="Dentpoll Dental kliniğinin karşılama alanı ve danışma bankosu" fetchpriority="high">
+            <div class="hero-photo-caption">
+              <span class="photo-caption-brand"><span class="photo-caption-mark"><svg class="icon"><use href="#i-tooth"/></svg></span><span class="photo-caption-text"><strong>Dentpoll Dental</strong><small>Kliniğimizden · Elazığ</small></span></span>
+              <span class="photo-caption-label">Özen · Güven · İletişim</span>
+            </div>
+          </div>
+          <div class="hero-stamp" aria-label="Kurucumuzun Elazığ'da 10 yılı aşkın deneyimi"><strong>10+</strong><span>yıl deneyim</span></div>
+          <div class="hero-float"><span class="hero-float-avatar"><img src="assets/doctor-demet.jpg" alt=""></span><span class="hero-float-copy"><strong>Dt. Demet Bozyiğit Yüksel</strong><span>Kurucu hekim · 10+ yıl Elazığ deneyimi</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-band" aria-label="Dentpoll Dental hakkında">
+      <div class="container proof-grid">
+        <div class="proof-item"><span class="proof-number">10+</span><span class="proof-copy"><strong>Yıllık deneyim</strong><span>Kurucumuzun Elazığ'daki diş hekimliği deneyimi</span></span></div>
+        <div class="proof-item"><span class="proof-number">04</span><span class="proof-copy"><strong>Hekim kadrosu</strong><span>Farklı alanlarda deneyimli ekip</span></span></div>
+        <div class="proof-item"><span class="proof-number"><svg class="icon" style="width:25px;height:25px"><use href="#i-heart"/></svg></span><span class="proof-copy"><strong>Kişiye özel yaklaşım</strong><span>Her hastanın ihtiyacına göre planlama</span></span></div>
+      </div>
+    </section>
+
+    <div class="marquee-band" aria-hidden="true"><div class="marquee-clip"><div class="marquee-track"><span>DENTPOLL DENTAL</span><i>✳</i><span>ELAZIĞ'IN GÜLÜŞÜ</span><i>✳</i><span>SAĞLIKLI GÜLÜŞLER</span><i>✳</i><span>KİŞİYE ÖZEL YAKLAŞIM</span><i>✳</i><span>DENTPOLL DENTAL</span><i>✳</i><span>ELAZIĞ'IN GÜLÜŞÜ</span><i>✳</i><span>SAĞLIKLI GÜLÜŞLER</span><i>✳</i><span>KİŞİYE ÖZEL YAKLAŞIM</span><i>✳</i></div></div></div>
+
+    <section class="section services-section" id="tedaviler" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-heading">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Tedavi alanlarımız</span>
+            <h2 id="services-title">İhtiyacınıza göre,<br><em>özenle planlanan bakım.</em></h2>
+          </div>
+          <p class="section-aside">Ağız ve diş sağlığınızı birlikte değerlendirelim. Hekim muayenesi sonrasında size uygun seçenekleri açıkça konuşalım.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card featured reveal">
+            <div class="service-card-top"><span class="service-icon"><svg class="icon"><use href="#i-smile"/></svg></span><span class="service-index">01</span></div>
+            <h3>Estetik & protetik diş tedavileri</h3>
+            <p>Doğal görünüm ve işlevi birlikte ele alan, kişiye özel seçenekler.</p>
+            <a class="service-link" href="https://wa.me/905346176845?text=Merhaba%2C%20estetik%20ve%20protetik%20di%C5%9F%20tedavileri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bu alanı sorun <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </article>
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-card-top"><span class="service-icon"><svg class="icon"><use href="#i-tooth"/></svg></span><span class="service-index">02</span></div>
+            <h3>İmplant tedavileri</h3>
+            <p>İhtiyaçlarınıza ve ağız sağlığınıza göre hekim değerlendirmesi.</p>
+            <a class="service-link" href="https://wa.me/905346176845?text=Merhaba%2C%20implant%20tedavileri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </article>
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-card-top"><span class="service-icon"><svg class="icon"><use href="#i-diamond"/></svg></span><span class="service-index">03</span></div>
+            <h3>Ortodonti</h3>
+            <p>Diş dizilimi ve çene ilişkisi için size özel değerlendirme.</p>
+            <a class="service-link" href="https://wa.me/905346176845?text=Merhaba%2C%20ortodonti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </article>
+          <article class="service-card reveal">
+            <div class="service-card-top"><span class="service-icon"><svg class="icon"><use href="#i-shield"/></svg></span><span class="service-index">04</span></div>
+            <h3>Restoratif & kanal tedavileri</h3>
+            <p>Diş dokusunu korumaya ve ağız sağlığını desteklemeye yönelik uygulamalar.</p>
+            <a class="service-link" href="https://wa.me/905346176845?text=Merhaba%2C%20restoratif%20ve%20kanal%20tedavileri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </article>
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-card-top"><span class="service-icon"><svg class="icon"><use href="#i-child"/></svg></span><span class="service-index">05</span></div>
+            <h3>Çocuk diş hekimliği</h3>
+            <p>Çocukların ihtiyaçlarını gözeten, anlayışlı bir yaklaşım.</p>
+            <a class="service-link" href="https://wa.me/905346176845?text=Merhaba%2C%20%C3%A7ocuk%20di%C5%9F%20hekimli%C4%9Fi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </article>
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-card-top"><span class="service-icon"><svg class="icon"><use href="#i-sparkles"/></svg></span><span class="service-index">06</span></div>
+            <h3>Diş beyazlatma</h3>
+            <p>Beklentilerinizi ve size uygun seçenekleri hekiminizle konuşun.</p>
+            <a class="service-link" href="https://wa.me/905346176845?text=Merhaba%2C%20di%C5%9F%20beyazlatma%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+          </article>
+        </div>
+        <p class="clinical-note"><svg class="icon"><use href="#i-check"/></svg><span>Sunulabilecek tedavi ve uygulamalar, hekim muayenesi ve klinik değerlendirmesi sonucunda belirlenir.</span></p>
+      </div>
+    </section>
+
+    <section class="approach-section" id="yaklasim" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="approach-panel reveal">
+          <div class="approach-head">
+            <div><span class="eyebrow"><span class="eyebrow-dot"></span> Dentpoll'da süreç</span><h2 id="approach-title">Önce sizi dinler,<br><em>birlikte yol alırız.</em></h2></div>
+            <p class="approach-intro">Diş hekimi ziyaretinizin her aşamasında ne olacağını bilmeniz için açık ve anlaşılır bir iletişim benimsiyoruz.</p>
+          </div>
+          <div class="steps-grid">
+            <article class="step"><span class="step-number">01 · TANIŞMA</span><h3>İhtiyacınızı dinleyelim</h3><p>Beklentilerinizi ve sizi kliniğe getiren konuyu birlikte konuşalım.</p></article>
+            <article class="step"><span class="step-number">02 · DEĞERLENDİRME</span><h3>Durumu birlikte anlayalım</h3><p>Hekim muayenesiyle ağız ve diş sağlığınız değerlendirilsin.</p></article>
+            <article class="step"><span class="step-number">03 · PLANLAMA</span><h3>Seçenekleri netleştirelim</h3><p>Size uygun seçenekleri ve izlenecek adımları açıkça konuşalım.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team-section" id="hekimler" aria-labelledby="team-title">
+      <div class="container">
+        <div class="team-header">
+          <div class="section-heading reveal">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Hekimlerimiz</span>
+            <h2 id="team-title">Bilgi ve deneyim,<br><em>içten bir yaklaşımla.</em></h2>
+            <p>Dentpoll Dental hekimleri; farklı uzmanlık ve deneyimleriyle her hastanın ihtiyacını dikkatle ele alıyor.</p>
+          </div>
+          <a class="button button-outline reveal" href="https://wa.me/905346176845?text=Merhaba%2C%20Dentpoll%20Dental%20hekimleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Hekimlere danışın <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="team-grid">
+          <article class="doctor-card reveal">
+            <div class="doctor-photo-frame"><img class="doctor-photo" src="assets/doctor-demet.jpg" alt="Dt. Demet Bozyiğit Yüksel" loading="lazy"><span class="doctor-tag">Kurucu hekim</span></div>
+            <div class="doctor-info"><h3>Dt. Demet Bozyiğit Yüksel</h3><p class="doctor-title">Genel Diş Hekimi</p><p class="doctor-bio">Dentpoll Dental'ın kurucusu. 10 yılı aşkın süredir Elazığ'da diş hekimi olarak hizmet veriyor.</p><a class="doctor-more" href="https://wa.me/905346176845?text=Merhaba%2C%20Dt.%20Demet%20Bozyi%C4%9Fit%20Y%C3%BCksel%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a></div>
+          </article>
+          <article class="doctor-card reveal reveal-delay-1">
+            <div class="doctor-photo-frame"><img class="doctor-photo" src="assets/doctor-eymen.jpg" alt="Dr. Dt. Eymen İzzettinoğlu" loading="lazy"><span class="doctor-tag">Uzman hekim</span></div>
+            <div class="doctor-info"><h3>Dr. Dt. Eymen İzzettinoğlu</h3><p class="doctor-title">Protetik Diş Tedavisi Uzmanı · PhD</p><p class="doctor-bio">Protetik tedaviler, dijital iş akışları ve implant destekli protez alanlarına odaklanıyor.</p><a class="doctor-more" href="https://wa.me/905346176845?text=Merhaba%2C%20Dr.%20Dt.%20Eymen%20%C4%B0zzettino%C4%9Flu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a></div>
+          </article>
+          <article class="doctor-card reveal reveal-delay-2">
+            <div class="doctor-photo-frame"><img class="doctor-photo" src="assets/doctor-elif.jpg" alt="Dt. Elif Sude Emet" loading="lazy"><span class="doctor-tag">Diş hekimi</span></div>
+            <div class="doctor-info"><h3>Dt. Elif Sude Emet</h3><p class="doctor-title">Diş Hekimi</p><p class="doctor-bio">Protetik ve estetik tedaviler, implant, çocuk diş hekimliği, kanal tedavisi ve beyazlatma.</p><a class="doctor-more" href="https://wa.me/905346176845?text=Merhaba%2C%20Dt.%20Elif%20Sude%20Emet%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a></div>
+          </article>
+          <article class="doctor-card reveal reveal-delay-3">
+            <div class="doctor-photo-frame"><img class="doctor-photo" src="assets/doctor-kursat.jpg" alt="Dt. Kürşat Koç" loading="lazy"><span class="doctor-tag">Diş hekimi</span></div>
+            <div class="doctor-info"><h3>Dt. Kürşat Koç</h3><p class="doctor-title">Diş Hekimi</p><p class="doctor-bio">Estetik diş hekimliği, implant, ortodonti ve restoratif tedaviler üzerine çalışıyor.</p><a class="doctor-more" href="https://wa.me/905346176845?text=Merhaba%2C%20Dt.%20K%C3%BCr%C5%9Fat%20Ko%C3%A7%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">Bilgi alın <svg class="icon"><use href="#i-arrow-right"/></svg></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section clinic-section" id="klinik" aria-labelledby="clinic-title">
+      <div class="container">
+        <div class="clinic-card reveal">
+          <div class="clinic-visual"><img class="parallax-photo" data-parallax src="assets/clinic-room.jpg" alt="Dentpoll Dental kliniğinden tedavi odası ve diş ünitesi" loading="lazy"><span class="clinic-chip"><svg class="icon"><use href="#i-sparkles"/></svg> Kliniğimizden gerçek bir kare</span></div>
+          <div class="clinic-copy">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Kliniğimiz</span>
+            <h2 id="clinic-title">Kendinizi rahat hissedeceğiniz <em>bir ortam.</em></h2>
+            <p>Modern klinik ortamımızda güncel diş hekimliği yaklaşımlarını hasta odaklı bir anlayışla buluşturuyoruz. Tedavi sürecinde merak ettiklerinizi sorabilmeniz ve kendinizi güvende hissetmeniz bizim için önemli.</p>
+            <ul class="clinic-points"><li><svg class="icon"><use href="#i-check"/></svg> Hasta odaklı yaklaşım</li><li><svg class="icon"><use href="#i-check"/></svg> Güncel tedavi yöntemleri</li><li><svg class="icon"><use href="#i-check"/></svg> Kişiye özel planlama</li><li><svg class="icon"><use href="#i-check"/></svg> Açık iletişim</li></ul>
+            <a class="button button-primary" href="#iletisim">Kliniğe ulaşın <svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews-section" id="yorumlar" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews-head">
+          <div class="section-heading reveal"><span class="eyebrow"><span class="eyebrow-dot"></span> Hasta deneyimleri</span><h2 id="reviews-title">Güven, güzel<br><em>bir gülüşle başlar.</em></h2></div>
+          <p class="review-context reveal">Yorumlar, Dentpoll Dental'ın mevcut web sitesinde paylaşılan hasta geri bildirimlerinden seçilmiştir.</p>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card featured reveal"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Çok güzel bir klinik. Demet hocam başta olmak üzere tüm ekip güler yüzlü ve işinin ehli. Herşey için teşekkür ederiz.</blockquote><div class="review-person"><span class="review-avatar">D</span><span>Dentpoll Dental hasta yorumu</span></div></article>
+          <article class="review-card reveal reveal-delay-1"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Arkadaşım aracılığı ile bulduğum bir klinik doktorlar ve tüm ekip harikaydı. Özellikle Asistan Beyza hanım çok ilgili güler yüzlü.</blockquote><div class="review-person"><span class="review-avatar">MK</span><span>Metin K.</span></div></article>
+          <article class="review-card reveal reveal-delay-2"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Demet hoca ve tüm ekip arkadaşları çok başarılı ve işlerinde çok iyiler rahatlıkla tercih edebileceğiniz bir yer.</blockquote><div class="review-person"><span class="review-avatar">MC</span><span>Melek C.</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="sss" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="faq-intro reveal"><div class="section-heading"><span class="eyebrow"><span class="eyebrow-dot"></span> Sık sorulanlar</span><h2 id="faq-title">Aklınızdaki<br><em>sorular.</em></h2><p>Kliniğimize gelmeden önce merak ettikleriniz için kısa yanıtlar.</p></div><a class="button button-outline" href="https://wa.me/905346176845?text=Merhaba%2C%20Dentpoll%20Dental%20i%C3%A7in%20bir%20sorum%20olacakt%C4%B1." target="_blank" rel="noopener noreferrer">Bize sorun <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+        <div class="faq-list reveal reveal-delay-1">
+          <label class="faq-search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input id="faqSearch" type="search" autocomplete="off" aria-label="Sık sorulan sorularda ara" placeholder="Sorularda ara…"></label>
+          <details class="faq-item"><summary>Nasıl randevu alabilirim?<span class="faq-plus" aria-hidden="true"></span></summary><p>Telefonla arayabilir veya WhatsApp üzerinden bize yazabilirsiniz. Ekibimiz uygun randevu seçenekleri için size yardımcı olur.</p></details>
+          <details class="faq-item"><summary>İlk muayenede neler konuşulur?<span class="faq-plus" aria-hidden="true"></span></summary><p>Önce beklentileriniz ve ihtiyaçlarınız dinlenir. Hekim değerlendirmesinin ardından size uygun seçenekler ve izlenecek süreç hakkında bilgi verilir.</p></details>
+          <details class="faq-item"><summary>Hangi tedaviler için kliniğe başvurabilirim?<span class="faq-plus" aria-hidden="true"></span></summary><p>Estetik ve protetik tedaviler, implant, ortodonti, restoratif ve kanal tedavileri, çocuk diş hekimliği ve diş beyazlatma alanlarında bilgi alabilirsiniz. Uygun tedavi muayene sonrasında belirlenir.</p></details>
+          <details class="faq-item"><summary>Kliniğiniz nerede?<span class="faq-plus" aria-hidden="true"></span></summary><p>Cumhuriyet Mahallesi'nde, Polatlar Camii karşısında ve Akgün AVM'nin altında bulunuyoruz. Yol tarifi için iletişim bölümündeki harita bağlantısını kullanabilirsiniz.</p></details>
+          <details class="faq-item"><summary>Güncel çalışma saatlerinizi nasıl öğrenebilirim?<span class="faq-plus" aria-hidden="true"></span></summary><p>Güncel randevu ve ziyaret saatleri için bizi telefonla arayabilir veya WhatsApp'tan mesaj gönderebilirsiniz.</p></details>
+          <p class="faq-empty" id="faqEmpty" role="status" hidden>Aramanızla eşleşen bir soru bulunamadı.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="iletisim" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> İletişim & randevu</span>
+          <h2 id="contact-title">Gülüşünüz için ilk adım <em>bir mesaj.</em></h2>
+          <p>Aklınızdaki soruları bize iletin veya randevu seçenekleri için doğrudan arayın. Size yardımcı olmaktan memnuniyet duyarız.</p>
+          <div class="contact-list">
+            <div class="contact-item"><span class="contact-icon"><svg class="icon"><use href="#i-pin"/></svg></span><div><small>Adres</small><a href="https://www.google.com/maps/search/?api=1&query=Dentpoll+Dental+Elaz%C4%B1%C4%9F" target="_blank" rel="noopener noreferrer">Cumhuriyet Mahallesi, Polatlar Camii karşısı<br>Akgün AVM altı, Elazığ <svg class="icon" style="width:12px;height:12px;vertical-align:-2px"><use href="#i-arrow"/></svg></a></div></div>
+            <div class="contact-item"><span class="contact-icon"><svg class="icon"><use href="#i-phone"/></svg></span><div><small>Telefon & WhatsApp</small><a href="tel:+905346176845">0 534 617 68 45</a></div></div>
+            <div class="contact-item"><span class="contact-icon"><svg class="icon"><use href="#i-chat"/></svg></span><div><small>E-posta</small><a href="mailto:dentpolldental@gmail.com">dentpolldental@gmail.com</a></div></div>
+          </div>
+          <a class="contact-vcard" href="assets/dentpoll-contact.vcf" download="Dentpoll-Dental.vcf"><svg class="icon" aria-hidden="true"><use href="#i-contact"/></svg> Kişilere kaydet</a>
+        </div>
+        <div class="contact-form-card reveal reveal-delay-1">
+          <h3 class="form-title">Randevu için bize yazın</h3>
+          <p class="form-subtitle">Bilgilerinizi girin, WhatsApp mesajınızı birlikte oluşturalım.</p>
+          <form id="appointmentForm">
+            <div class="form-grid">
+              <div class="form-field"><label for="patientName">Adınız soyadınız</label><input id="patientName" name="name" type="text" autocomplete="name" placeholder="Ad Soyad" required></div>
+              <div class="form-field"><label for="patientPhone">Telefon numaranız</label><input id="patientPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="05__ ___ __ __" required></div>
+              <div class="form-field full"><label for="treatment">İlgilendiğiniz konu</label><select id="treatment" name="treatment" required><option value="" disabled selected>Bir konu seçin</option><option>Genel muayene</option><option>Estetik ve protetik diş tedavileri</option><option>İmplant tedavisi</option><option>Ortodonti</option><option>Restoratif / kanal tedavisi</option><option>Çocuk diş hekimliği</option><option>Diş beyazlatma</option><option>Diğer</option></select></div>
+              <div class="form-field"><label for="preferredDate">Tercih edilen gün <span style="font-weight:450;color:#8993a1">(isteğe bağlı)</span></label><input id="preferredDate" name="preferredDate" type="date"></div>
+              <div class="form-field"><label for="preferredDoctor">Hekim tercihi <span style="font-weight:450;color:#8993a1">(isteğe bağlı)</span></label><select id="preferredDoctor" name="doctor"><option value="">Fark etmez</option><option>Dt. Demet Bozyiğit Yüksel</option><option>Dr. Dt. Eymen İzzettinoğlu</option><option>Dt. Elif Sude Emet</option><option>Dt. Kürşat Koç</option></select></div>
+              <div class="form-field full"><label for="message">Kısa notunuz <span style="font-weight:450;color:#8993a1">(isteğe bağlı)</span></label><textarea id="message" name="message" placeholder="Size nasıl yardımcı olabiliriz?"></textarea></div>
+            </div>
+            <button class="button button-primary form-submit" type="submit">WhatsApp'ta mesajı hazırla <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <p class="form-privacy">Tercih ettiğiniz gün ve hekim randevu talebi olarak iletilir; uygunluk klinik ekibince teyit edilir.</p>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+            <p class="form-disclaimer">Bu form teşhis veya acil sağlık danışmanlığı için değildir. Tedavi ve muayene planı hekim değerlendirmesiyle belirlenir.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <a class="brand" href="#top" aria-label="Dentpoll Dental sayfa başına dön"><span class="brand-mark"><img src="assets/dentpoll-mark.png" alt=""></span><span class="brand-word"><strong>DENTPOLL</strong><small>DENTAL · ELAZIĞ</small></span></a>
+        <nav class="footer-nav" aria-label="Alt menü"><a href="#tedaviler">Tedaviler</a><a href="#hekimler">Hekimlerimiz</a><a href="#klinik">Kliniğimiz</a><a href="#sss">Sık sorulanlar</a><a href="#iletisim">İletişim</a></nav>
+      </div>
+      <div class="footer-bottom"><p>© <span id="year"></span> Dentpoll Dental · Elazığ</p><p class="footer-note">Bu sitedeki bilgiler genel bilgilendirme amaçlıdır. Tanı ve tedavi için diş hekimi muayenesi gerekir.</p></div>
+    </div>
+  </footer>
+  <a class="floating-whatsapp" href="https://wa.me/905346176845?text=Merhaba%20Dentpoll%20Dental%2C%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp üzerinden Dentpoll Dental ile iletişime geçin"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp'tan yazın</a>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Sayfa başına dön"><svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></button>
+  <div class="mobile-quickbar" aria-label="Hızlı iletişim"><a class="mobile-call" href="tel:+905346176845"><svg class="icon"><use href="#i-phone"/></svg> Hemen ara</a><a class="mobile-chat" href="https://wa.me/905346176845?text=Merhaba%20Dentpoll%20Dental%2C%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp'tan randevu</a></div>
+  <script>
+    (() => {
+      const menuButton = document.querySelector('.menu-toggle');
+      const mainNav = document.querySelector('#mainNav');
+      const menuIconUse = document.querySelector('.menu-icon use');
+      const closeMenu = () => {
+        mainNav.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Menüyü aç');
+        menuIconUse.setAttribute('href', '#i-menu');
+      };
+      menuButton.addEventListener('click', () => {
+        const open = menuButton.getAttribute('aria-expanded') === 'true';
+        if (open) closeMenu();
+        else {
+          mainNav.classList.add('is-open');
+          menuButton.setAttribute('aria-expanded', 'true');
+          menuButton.setAttribute('aria-label', 'Menüyü kapat');
+          menuIconUse.setAttribute('href', '#i-close');
+        }
+      });
+      const navLinks = [...mainNav.querySelectorAll('a[href^="#"]')];
+      navLinks.forEach(link => link.addEventListener('click', closeMenu));
+      const navSections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        const navObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+          });
+        }, { rootMargin: '-28% 0px -62% 0px', threshold: 0 });
+        navSections.forEach(section => navObserver.observe(section));
+      }
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+      document.addEventListener('click', event => {
+        if (mainNav.classList.contains('is-open') && !mainNav.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+      });
+      document.querySelector('#year').textContent = new Date().getFullYear();
+      const faqSearch = document.querySelector('#faqSearch');
+      const faqItems = [...document.querySelectorAll('.faq-item')];
+      const faqEmpty = document.querySelector('#faqEmpty');
+      faqSearch.addEventListener('input', () => {
+        const query = faqSearch.value.trim().toLocaleLowerCase('tr-TR');
+        let matches = 0;
+        faqItems.forEach(item => {
+          const visible = item.textContent.toLocaleLowerCase('tr-TR').includes(query);
+          item.hidden = !visible;
+          if (visible) matches++;
+        });
+        faqEmpty.hidden = matches !== 0;
+      });
+
+      const preferredDateInput = document.querySelector('#preferredDate');
+      const todayLocal = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0,10);
+      preferredDateInput.min = todayLocal;
+
+      const form = document.querySelector('#appointmentForm');
+      const status = document.querySelector('#formStatus');
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const data = new FormData(form);
+        const lines = [
+          'Merhaba Dentpoll Dental, randevu hakkında bilgi almak istiyorum.',
+          '',
+          `Ad Soyad: ${String(data.get('name')).trim()}`,
+          `Telefon: ${String(data.get('phone')).trim()}`,
+          `İlgilendiğim konu: ${String(data.get('treatment')).trim()}`
+        ];
+        const preferredDate = String(data.get('preferredDate') || '').trim();
+        const preferredDoctor = String(data.get('doctor') || '').trim();
+        if (preferredDate) lines.push(`Tercih ettiğim gün: ${new Date(preferredDate + 'T12:00:00').toLocaleDateString('tr-TR')}`);
+        if (preferredDoctor) lines.push(`Hekim tercihi: ${preferredDoctor}`);
+        const note = String(data.get('message') || '').trim();
+        if (note) lines.push(`Not: ${note}`);
+        const url = `https://wa.me/905346176845?text=${encodeURIComponent(lines.join('\n'))}`;
+        const tab = window.open(url, '_blank');
+        if (tab) tab.opener = null;
+        else window.location.href = url;
+        status.textContent = 'WhatsApp açılıyor. Mesajınızı uygulamada kontrol edip gönderebilirsiniz.';
+      });
+
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.documentElement.classList.add('js-ready');
+      const revealNodes = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || reducedMotion) {
+        revealNodes.forEach(node => node.classList.add('is-visible'));
+      } else {
+        const observer = new IntersectionObserver((entries, currentObserver) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              currentObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: .1, rootMargin: '0px 0px -22px 0px' });
+        revealNodes.forEach(node => observer.observe(node));
+      }
+
+      const progressBar = document.querySelector('#scrollProgress');
+      const backToTopButton = document.querySelector('#backToTop');
+      backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' }));
+      const parallaxPhotos = document.querySelectorAll('[data-parallax]');
+      let effectsFrame = 0;
+      const updateScrollEffects = () => {
+        effectsFrame = 0;
+        const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollRange > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollRange)) : 0;
+        progressBar.style.transform = `scaleX(${progress})`;
+        backToTopButton.classList.toggle('is-visible', window.scrollY > 600);
+        if (!reducedMotion && window.innerWidth > 760) {
+          parallaxPhotos.forEach(photo => {
+            const rect = photo.getBoundingClientRect();
+            const offset = window.innerHeight * .5 - (rect.top + rect.height * .5);
+            const shift = Math.max(-14, Math.min(14, offset * .035));
+            photo.style.setProperty('--parallax-y', `${shift.toFixed(1)}px`);
+          });
+        }
+      };
+      const requestScrollEffects = () => {
+        if (!effectsFrame) effectsFrame = requestAnimationFrame(updateScrollEffects);
+      };
+      window.addEventListener('scroll', requestScrollEffects, { passive: true });
+      window.addEventListener('resize', requestScrollEffects, { passive: true });
+      updateScrollEffects();
+
+      const heroVisual = document.querySelector('.hero-visual');
+      const heroFrame = document.querySelector('.hero-photo-frame');
+      const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      if (!reducedMotion && finePointer) {
+        heroVisual.addEventListener('pointermove', event => {
+          const rect = heroVisual.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width - .5) * 2;
+          const y = ((event.clientY - rect.top) / rect.height - .5) * 2;
+          heroVisual.classList.add('is-tilting');
+          heroVisual.style.setProperty('--tilt-x', `${(x * 1.35).toFixed(2)}deg`);
+          heroVisual.style.setProperty('--tilt-y', `${(-y * 1.1).toFixed(2)}deg`);
+        });
+        heroVisual.addEventListener('pointerleave', () => {
+          heroVisual.classList.remove('is-tilting');
+          heroVisual.style.setProperty('--tilt-x', '0deg');
+          heroVisual.style.setProperty('--tilt-y', '0deg');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
